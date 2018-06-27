@@ -7,19 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0DA38220E3F3DB00B34679 /* StorybookClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA38120E3F3DB00B34679 /* StorybookClass.swift */; };
+		1B0DA38320E3F3DB00B34679 /* StorybookClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA38120E3F3DB00B34679 /* StorybookClass.swift */; };
+		1B0DA38E20E417B800B34679 /* SetupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA38D20E417B800B34679 /* SetupStruct.swift */; };
+		1B0DA38F20E417B800B34679 /* SetupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA38D20E417B800B34679 /* SetupStruct.swift */; };
+		1B0DA39120E41DA600B34679 /* SectionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39020E41DA600B34679 /* SectionStruct.swift */; };
+		1B0DA39220E41DA600B34679 /* SectionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39020E41DA600B34679 /* SectionStruct.swift */; };
+		1B0DA39420E41E3A00B34679 /* PageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39320E41E3A00B34679 /* PageClass.swift */; };
+		1B0DA39520E41E3A00B34679 /* PageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39320E41E3A00B34679 /* PageClass.swift */; };
+		1B0DA39720E41F4200B34679 /* SegmentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39620E41F4200B34679 /* SegmentStruct.swift */; };
+		1B0DA39820E41F4200B34679 /* SegmentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39620E41F4200B34679 /* SegmentStruct.swift */; };
+		1B0DA39A20E422AC00B34679 /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39920E422AC00B34679 /* QuizClass.swift */; };
+		1B0DA39B20E422AC00B34679 /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39920E422AC00B34679 /* QuizClass.swift */; };
+		1B0DA39D20E4287800B34679 /* QuestionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39C20E4287800B34679 /* QuestionStruct.swift */; };
+		1B0DA39E20E4287800B34679 /* QuestionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39C20E4287800B34679 /* QuestionStruct.swift */; };
+		1B0DA3A020E428B800B34679 /* FeebackStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39F20E428B800B34679 /* FeebackStruct.swift */; };
+		1B0DA3A120E428B800B34679 /* FeebackStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA39F20E428B800B34679 /* FeebackStruct.swift */; };
+		1B0DA3A320E4293C00B34679 /* AnswerStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA3A220E4293C00B34679 /* AnswerStruct.swift */; };
+		1B0DA3A420E4293C00B34679 /* AnswerStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DA3A220E4293C00B34679 /* AnswerStruct.swift */; };
 		1B31A62220DC0D1900744E9E /* SbplusXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B31A62020DC0D1900744E9E /* SbplusXMLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B31A63120DC0D6300744E9E /* SbplusXMLParser_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B31A62F20DC0D6300744E9E /* SbplusXMLParser_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B31A63620DC0DDF00744E9E /* SbplusXMLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31A61D20DC0D1900744E9E /* SbplusXMLParser.framework */; };
+		1B31A63120DC0D6300744E9E /* SbplusXMLManager_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B31A62F20DC0D6300744E9E /* SbplusXMLManager_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B31A63620DC0DDF00744E9E /* SbplusXMLManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31A61D20DC0D1900744E9E /* SbplusXMLManager.framework */; };
 		1B31A63920DC0EDE00744E9E /* ParserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B31A63820DC0EDE00744E9E /* ParserClass.swift */; };
 		1B31A63A20DC0EDE00744E9E /* ParserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B31A63820DC0EDE00744E9E /* ParserClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B31A61D20DC0D1900744E9E /* SbplusXMLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbplusXMLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B0DA38120E3F3DB00B34679 /* StorybookClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorybookClass.swift; sourceTree = "<group>"; };
+		1B0DA38D20E417B800B34679 /* SetupStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupStruct.swift; sourceTree = "<group>"; };
+		1B0DA39020E41DA600B34679 /* SectionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionStruct.swift; sourceTree = "<group>"; };
+		1B0DA39320E41E3A00B34679 /* PageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageClass.swift; sourceTree = "<group>"; };
+		1B0DA39620E41F4200B34679 /* SegmentStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentStruct.swift; sourceTree = "<group>"; };
+		1B0DA39920E422AC00B34679 /* QuizClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizClass.swift; sourceTree = "<group>"; };
+		1B0DA39C20E4287800B34679 /* QuestionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStruct.swift; sourceTree = "<group>"; };
+		1B0DA39F20E428B800B34679 /* FeebackStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeebackStruct.swift; sourceTree = "<group>"; };
+		1B0DA3A220E4293C00B34679 /* AnswerStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerStruct.swift; sourceTree = "<group>"; };
+		1B31A61D20DC0D1900744E9E /* SbplusXMLManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbplusXMLManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B31A62020DC0D1900744E9E /* SbplusXMLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbplusXMLParser.h; sourceTree = "<group>"; };
 		1B31A62120DC0D1900744E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B31A62D20DC0D6300744E9E /* SbplusXMLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbplusXMLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B31A62F20DC0D6300744E9E /* SbplusXMLParser_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbplusXMLParser_iOS.h; sourceTree = "<group>"; };
+		1B31A62D20DC0D6300744E9E /* SbplusXMLManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbplusXMLManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B31A62F20DC0D6300744E9E /* SbplusXMLManager_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbplusXMLManager_iOS.h; sourceTree = "<group>"; };
 		1B31A63020DC0D6300744E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B31A63820DC0EDE00744E9E /* ParserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B31A63620DC0DDF00744E9E /* SbplusXMLParser.framework in Frameworks */,
+				1B31A63620DC0DDF00744E9E /* SbplusXMLManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +73,8 @@
 		1B31A61320DC0D1900744E9E = {
 			isa = PBXGroup;
 			children = (
-				1B31A61F20DC0D1900744E9E /* SbplusXMLParser */,
-				1B31A62E20DC0D6300744E9E /* SbplusXMLParser iOS */,
+				1B31A61F20DC0D1900744E9E /* SbplusXMLManager */,
+				1B31A62E20DC0D6300744E9E /* SbplusXMLManager iOS */,
 				1B31A61E20DC0D1900744E9E /* Products */,
 				1B31A63520DC0DDF00744E9E /* Frameworks */,
 			);
@@ -56,29 +83,38 @@
 		1B31A61E20DC0D1900744E9E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B31A61D20DC0D1900744E9E /* SbplusXMLParser.framework */,
-				1B31A62D20DC0D6300744E9E /* SbplusXMLParser.framework */,
+				1B31A61D20DC0D1900744E9E /* SbplusXMLManager.framework */,
+				1B31A62D20DC0D6300744E9E /* SbplusXMLManager.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1B31A61F20DC0D1900744E9E /* SbplusXMLParser */ = {
+		1B31A61F20DC0D1900744E9E /* SbplusXMLManager */ = {
 			isa = PBXGroup;
 			children = (
 				1B31A62020DC0D1900744E9E /* SbplusXMLParser.h */,
 				1B31A62120DC0D1900744E9E /* Info.plist */,
 				1B31A63820DC0EDE00744E9E /* ParserClass.swift */,
+				1B0DA38120E3F3DB00B34679 /* StorybookClass.swift */,
+				1B0DA38D20E417B800B34679 /* SetupStruct.swift */,
+				1B0DA39020E41DA600B34679 /* SectionStruct.swift */,
+				1B0DA39320E41E3A00B34679 /* PageClass.swift */,
+				1B0DA39620E41F4200B34679 /* SegmentStruct.swift */,
+				1B0DA39920E422AC00B34679 /* QuizClass.swift */,
+				1B0DA39C20E4287800B34679 /* QuestionStruct.swift */,
+				1B0DA39F20E428B800B34679 /* FeebackStruct.swift */,
+				1B0DA3A220E4293C00B34679 /* AnswerStruct.swift */,
 			);
-			path = SbplusXMLParser;
+			path = SbplusXMLManager;
 			sourceTree = "<group>";
 		};
-		1B31A62E20DC0D6300744E9E /* SbplusXMLParser iOS */ = {
+		1B31A62E20DC0D6300744E9E /* SbplusXMLManager iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1B31A62F20DC0D6300744E9E /* SbplusXMLParser_iOS.h */,
+				1B31A62F20DC0D6300744E9E /* SbplusXMLManager_iOS.h */,
 				1B31A63020DC0D6300744E9E /* Info.plist */,
 			);
-			path = "SbplusXMLParser iOS";
+			path = "SbplusXMLManager iOS";
 			sourceTree = "<group>";
 		};
 		1B31A63520DC0DDF00744E9E /* Frameworks */ = {
@@ -103,16 +139,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B31A63120DC0D6300744E9E /* SbplusXMLParser_iOS.h in Headers */,
+				1B31A63120DC0D6300744E9E /* SbplusXMLManager_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1B31A61C20DC0D1900744E9E /* SbplusXMLParser */ = {
+		1B31A61C20DC0D1900744E9E /* SbplusXMLManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B31A62520DC0D1900744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLParser" */;
+			buildConfigurationList = 1B31A62520DC0D1900744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLManager" */;
 			buildPhases = (
 				1B31A61820DC0D1900744E9E /* Sources */,
 				1B31A61920DC0D1900744E9E /* Frameworks */,
@@ -123,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = SbplusXMLParser;
+			name = SbplusXMLManager;
 			productName = SbplusXMLParser;
-			productReference = 1B31A61D20DC0D1900744E9E /* SbplusXMLParser.framework */;
+			productReference = 1B31A61D20DC0D1900744E9E /* SbplusXMLManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1B31A62C20DC0D6300744E9E /* SbplusXMLParser iOS */ = {
+		1B31A62C20DC0D6300744E9E /* SbplusXMLManager iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B31A63220DC0D6300744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLParser iOS" */;
+			buildConfigurationList = 1B31A63220DC0D6300744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLManager iOS" */;
 			buildPhases = (
 				1B31A62820DC0D6300744E9E /* Sources */,
 				1B31A62920DC0D6300744E9E /* Frameworks */,
@@ -141,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = "SbplusXMLParser iOS";
+			name = "SbplusXMLManager iOS";
 			productName = "SbplusXMLParser iOS";
-			productReference = 1B31A62D20DC0D6300744E9E /* SbplusXMLParser.framework */;
+			productReference = 1B31A62D20DC0D6300744E9E /* SbplusXMLManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B31A61720DC0D1900744E9E /* Build configuration list for PBXProject "SbplusXMLParser" */;
+			buildConfigurationList = 1B31A61720DC0D1900744E9E /* Build configuration list for PBXProject "SbplusXMLManager" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -177,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B31A61C20DC0D1900744E9E /* SbplusXMLParser */,
-				1B31A62C20DC0D6300744E9E /* SbplusXMLParser iOS */,
+				1B31A61C20DC0D1900744E9E /* SbplusXMLManager */,
+				1B31A62C20DC0D6300744E9E /* SbplusXMLManager iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -205,7 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0DA39120E41DA600B34679 /* SectionStruct.swift in Sources */,
+				1B0DA38220E3F3DB00B34679 /* StorybookClass.swift in Sources */,
+				1B0DA39A20E422AC00B34679 /* QuizClass.swift in Sources */,
 				1B31A63920DC0EDE00744E9E /* ParserClass.swift in Sources */,
+				1B0DA3A020E428B800B34679 /* FeebackStruct.swift in Sources */,
+				1B0DA39D20E4287800B34679 /* QuestionStruct.swift in Sources */,
+				1B0DA3A320E4293C00B34679 /* AnswerStruct.swift in Sources */,
+				1B0DA38E20E417B800B34679 /* SetupStruct.swift in Sources */,
+				1B0DA39720E41F4200B34679 /* SegmentStruct.swift in Sources */,
+				1B0DA39420E41E3A00B34679 /* PageClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0DA39220E41DA600B34679 /* SectionStruct.swift in Sources */,
+				1B0DA38320E3F3DB00B34679 /* StorybookClass.swift in Sources */,
+				1B0DA39B20E422AC00B34679 /* QuizClass.swift in Sources */,
 				1B31A63A20DC0EDE00744E9E /* ParserClass.swift in Sources */,
+				1B0DA3A120E428B800B34679 /* FeebackStruct.swift in Sources */,
+				1B0DA39E20E4287800B34679 /* QuestionStruct.swift in Sources */,
+				1B0DA3A420E4293C00B34679 /* AnswerStruct.swift in Sources */,
+				1B0DA38F20E417B800B34679 /* SetupStruct.swift in Sources */,
+				1B0DA39820E41F4200B34679 /* SegmentStruct.swift in Sources */,
+				1B0DA39520E41E3A00B34679 /* PageClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +407,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SbplusXMLParser/Info.plist;
+				INFOPLIST_FILE = SbplusXMLManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,7 +415,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.SbplusXMLParser;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.SbplusXMLManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -383,7 +437,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SbplusXMLParser/Info.plist;
+				INFOPLIST_FILE = SbplusXMLManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +445,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.SbplusXMLParser;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.SbplusXMLManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -410,7 +464,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SbplusXMLParser iOS/Info.plist";
+				INFOPLIST_FILE = "SbplusXMLManager iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,8 +472,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbplusXMLParser-iOS";
-				PRODUCT_NAME = SbplusXMLParser;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbplusXMLManager-iOS";
+				PRODUCT_NAME = SbplusXMLManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -440,7 +494,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SbplusXMLParser iOS/Info.plist";
+				INFOPLIST_FILE = "SbplusXMLManager iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -448,8 +502,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbplusXMLParser-iOS";
-				PRODUCT_NAME = SbplusXMLParser;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbplusXMLManager-iOS";
+				PRODUCT_NAME = SbplusXMLManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -461,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B31A61720DC0D1900744E9E /* Build configuration list for PBXProject "SbplusXMLParser" */ = {
+		1B31A61720DC0D1900744E9E /* Build configuration list for PBXProject "SbplusXMLManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B31A62320DC0D1900744E9E /* Debug */,
@@ -470,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B31A62520DC0D1900744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLParser" */ = {
+		1B31A62520DC0D1900744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B31A62620DC0D1900744E9E /* Debug */,
@@ -479,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B31A63220DC0D6300744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLParser iOS" */ = {
+		1B31A63220DC0D6300744E9E /* Build configuration list for PBXNativeTarget "SbplusXMLManager iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B31A63320DC0D6300744E9E /* Debug */,

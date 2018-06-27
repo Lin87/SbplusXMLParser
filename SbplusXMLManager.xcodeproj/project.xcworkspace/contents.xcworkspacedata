@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SbplusXMLParser.xcodeproj">
+      location = "self:/Users/ethan.lin/Repositories/SbplusXMLParser/SbplusXMLManager.xcodeproj">
    </FileRef>
 </Workspace>
