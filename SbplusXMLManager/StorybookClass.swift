@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Storybook {
+public class Storybook {
     
     var accent: String;
     var pageImgFormat: String;
@@ -17,8 +17,9 @@ class Storybook {
     var mathJax: Bool;
     var version: String;
     var setup: Setup;
+    var sections: Array<Section>;
     
-    init( accent: String, imgFormat: String, splashFormat: String, analytics: Bool, mathJax: Bool, setup: Setup, version: String ) {
+    init( accent: String, imgFormat: String, splashFormat: String, analytics: Bool, mathJax: Bool, setup: Setup, sections: Array<Section>, version: String ) {
         
         self.accent = accent;
         self.pageImgFormat = imgFormat;
@@ -26,13 +27,14 @@ class Storybook {
         self.analytics = analytics;
         self.mathJax = mathJax;
         self.setup = setup;
+        self.sections = sections;
         self.version = version;
         
     }
     
-    convenience init( setup: Setup, version: String ) {
+    convenience init( setup: Setup, sections: Array<Section>, version: String ) {
         
-        self.init( accent: "", imgFormat: "png", splashFormat: "svg", analytics: false, mathJax: false, setup: setup, version: version );
+        self.init( accent: "", imgFormat: "png", splashFormat: "svg", analytics: false, mathJax: false, setup: setup, sections: sections, version: version );
         
     }
     

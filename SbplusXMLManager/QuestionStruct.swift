@@ -34,6 +34,7 @@ struct Answer {
 
 struct Feedback {
     
+    var simple: String?;
     var correct: String?;
     var incorrect: String?;
     

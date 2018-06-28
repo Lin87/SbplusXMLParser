@@ -10,17 +10,21 @@
 
 import Foundation
 
-public class SbXmlManager {
+class SbXmlParser {
     
     var xmlPath: String;
     var sbXml: Storybook?;
     
-    required public init( path: String ) {
+    init( path: String ) {
         self.xmlPath = path;
     }
     
-    public func test() -> String {
-        return "SbXmlManager is working!";
+    func test() -> String {
+        return "SbXmlParser is working!";
+    }
+    
+    func getSbXml() -> Storybook {
+        return self.sbXml!;
     }
     
 }
