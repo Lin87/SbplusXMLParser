@@ -10,15 +10,11 @@ import Foundation
 
 class Quiz: Page {
     
-    var question: Question;
-    var answer: Answer;
-    var feedback: Feedback?;
+    var questionDelegate: QuestionProtocol;
     
-    init( type: String, title: String, question: Question, answer: Answer, feedback: Feedback, transition: String ) {
+    init( type: String, title: String, question: Question, transition: String ) {
         
-        self.question = question;
-        self.answer = answer;
-        self.feedback = feedback;
+        self.questionDelegate = QuizFactory.getQuestion( type: type, question: question );
         
         super.init(type: type, src: "", title: title, transition: transition, notes: "", widget: [Segment]() );
         
