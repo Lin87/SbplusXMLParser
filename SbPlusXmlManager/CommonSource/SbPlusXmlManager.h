@@ -6,7 +6,7 @@
 //  Copyright © 2018 University of Wisconsin System Office of Academic and Student Affairs. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for SbPlusXmlManager_iOS.
 FOUNDATION_EXPORT double SbPlusXmlManager_iOSVersionNumber;
