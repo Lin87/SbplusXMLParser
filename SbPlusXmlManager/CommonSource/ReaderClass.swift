@@ -23,4 +23,8 @@ class SbXmlReader {
         return self.sbXml!;
     }
     
+    func getPath() -> String {
+        return self.xmlPath;
+    }
+    
 }

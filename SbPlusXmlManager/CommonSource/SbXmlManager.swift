@@ -12,11 +12,15 @@ public class SbXmlManager {
     
     var storybook: Storybook?;
     
-    public func read( path: String ) {
+    public init() {}
+    
+    public func read( path: String ) -> String {
         
         let reader:SbXmlReader = SbXmlReader( path: path );
         
-        self.storybook = reader.getSbXml();
+        //self.storybook = reader.getSbXml();
+        
+        return reader.getPath();
         
     }
     
