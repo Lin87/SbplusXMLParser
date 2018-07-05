@@ -17,24 +17,14 @@
 		1B677DFE20EE706700CE97E8 /* SbPlusXmlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B677DFF20EE707800CE97E8 /* SbPlusXmlManager_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA58A2520EE6FDB004D631F /* SbPlusXmlManager_iOSTests.swift */; };
 		1B677E0020EE707900CE97E8 /* SbPlusXmlManager_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA58A2520EE6FDB004D631F /* SbPlusXmlManager_iOSTests.swift */; };
-		1B677E0D20EE749600CE97E8 /* SectionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0120EE749500CE97E8 /* SectionStruct.swift */; };
-		1B677E0E20EE749600CE97E8 /* SectionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0120EE749500CE97E8 /* SectionStruct.swift */; };
-		1B677E0F20EE749600CE97E8 /* SegmentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0220EE749500CE97E8 /* SegmentStruct.swift */; };
-		1B677E1020EE749600CE97E8 /* SegmentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0220EE749500CE97E8 /* SegmentStruct.swift */; };
 		1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
 		1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
-		1B677E1320EE749600CE97E8 /* SetupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0420EE749600CE97E8 /* SetupStruct.swift */; };
-		1B677E1420EE749600CE97E8 /* SetupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0420EE749600CE97E8 /* SetupStruct.swift */; };
-		1B677E1520EE749600CE97E8 /* QuestionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0520EE749600CE97E8 /* QuestionStruct.swift */; };
-		1B677E1620EE749600CE97E8 /* QuestionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0520EE749600CE97E8 /* QuestionStruct.swift */; };
 		1B677E1720EE749600CE97E8 /* WriterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0620EE749600CE97E8 /* WriterClass.swift */; };
 		1B677E1820EE749600CE97E8 /* WriterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0620EE749600CE97E8 /* WriterClass.swift */; };
 		1B677E1920EE749600CE97E8 /* QuizFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0720EE749600CE97E8 /* QuizFactory.swift */; };
 		1B677E1A20EE749600CE97E8 /* QuizFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0720EE749600CE97E8 /* QuizFactory.swift */; };
 		1B677E1D20EE749600CE97E8 /* StorybookClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookClass.swift */; };
 		1B677E1E20EE749600CE97E8 /* StorybookClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookClass.swift */; };
-		1B677E1F20EE749600CE97E8 /* PageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0A20EE749600CE97E8 /* PageClass.swift */; };
-		1B677E2020EE749600CE97E8 /* PageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0A20EE749600CE97E8 /* PageClass.swift */; };
 		1B677E2120EE749600CE97E8 /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0B20EE749600CE97E8 /* QuizClass.swift */; };
 		1B677E2220EE749600CE97E8 /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0B20EE749600CE97E8 /* QuizClass.swift */; };
 		1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */; };
@@ -75,15 +65,10 @@
 		1B1E9FE720EE7E220048D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B1E9FEA20EE7E220048D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B1E9FEC20EE7E220048D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B677E0120EE749500CE97E8 /* SectionStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionStruct.swift; sourceTree = "<group>"; };
-		1B677E0220EE749500CE97E8 /* SegmentStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentStruct.swift; sourceTree = "<group>"; };
 		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
-		1B677E0420EE749600CE97E8 /* SetupStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupStruct.swift; sourceTree = "<group>"; };
-		1B677E0520EE749600CE97E8 /* QuestionStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStruct.swift; sourceTree = "<group>"; };
 		1B677E0620EE749600CE97E8 /* WriterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriterClass.swift; sourceTree = "<group>"; };
 		1B677E0720EE749600CE97E8 /* QuizFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizFactory.swift; sourceTree = "<group>"; };
 		1B677E0920EE749600CE97E8 /* StorybookClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookClass.swift; sourceTree = "<group>"; };
-		1B677E0A20EE749600CE97E8 /* PageClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageClass.swift; sourceTree = "<group>"; };
 		1B677E0B20EE749600CE97E8 /* QuizClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizClass.swift; sourceTree = "<group>"; };
 		1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlManager.swift; sourceTree = "<group>"; };
 		1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbPlusXmlManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,15 +169,10 @@
 		1BA58A2120EE6F83004D631F /* CommonSource */ = {
 			isa = PBXGroup;
 			children = (
-				1B677E0A20EE749600CE97E8 /* PageClass.swift */,
 				1B677E0320EE749600CE97E8 /* ReaderClass.swift */,
-				1B677E0520EE749600CE97E8 /* QuestionStruct.swift */,
 				1B677E0B20EE749600CE97E8 /* QuizClass.swift */,
 				1B677E0720EE749600CE97E8 /* QuizFactory.swift */,
 				1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */,
-				1B677E0120EE749500CE97E8 /* SectionStruct.swift */,
-				1B677E0220EE749500CE97E8 /* SegmentStruct.swift */,
-				1B677E0420EE749600CE97E8 /* SetupStruct.swift */,
 				1B677E0920EE749600CE97E8 /* StorybookClass.swift */,
 				1B677E0620EE749600CE97E8 /* WriterClass.swift */,
 				1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */,
@@ -428,16 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B677E0F20EE749600CE97E8 /* SegmentStruct.swift in Sources */,
 				1B677E2120EE749600CE97E8 /* QuizClass.swift in Sources */,
 				1B677E1D20EE749600CE97E8 /* StorybookClass.swift in Sources */,
-				1B677E1F20EE749600CE97E8 /* PageClass.swift in Sources */,
-				1B677E1520EE749600CE97E8 /* QuestionStruct.swift in Sources */,
 				1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */,
 				1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */,
 				1B677E1920EE749600CE97E8 /* QuizFactory.swift in Sources */,
-				1B677E1320EE749600CE97E8 /* SetupStruct.swift in Sources */,
-				1B677E0D20EE749600CE97E8 /* SectionStruct.swift in Sources */,
 				1B677E1720EE749600CE97E8 /* WriterClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,16 +429,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B677E1020EE749600CE97E8 /* SegmentStruct.swift in Sources */,
 				1B677E2220EE749600CE97E8 /* QuizClass.swift in Sources */,
 				1B677E1E20EE749600CE97E8 /* StorybookClass.swift in Sources */,
-				1B677E2020EE749600CE97E8 /* PageClass.swift in Sources */,
-				1B677E1620EE749600CE97E8 /* QuestionStruct.swift in Sources */,
 				1B677E2420EE749600CE97E8 /* SbXmlManager.swift in Sources */,
 				1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */,
 				1B677E1A20EE749600CE97E8 /* QuizFactory.swift in Sources */,
-				1B677E1420EE749600CE97E8 /* SetupStruct.swift in Sources */,
-				1B677E0E20EE749600CE97E8 /* SectionStruct.swift in Sources */,
 				1B677E1820EE749600CE97E8 /* WriterClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
