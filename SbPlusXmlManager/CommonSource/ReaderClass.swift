@@ -12,19 +12,36 @@ import Foundation
 
 class SbXmlReader {
     
-    var xmlPath: String;
+    var xmlPath: String = "";
     var sbXml: Storybook?;
     
     init( path: String ) {
         self.xmlPath = path;
     }
     
-    func getSbXml() -> Storybook {
-        return self.sbXml!;
+    func getXMLContent() throws -> String {
+        
+        #if os( iOS )
+        
+        let xmlContent = try String( contentsOf: NSURL( string: self.xmlPath )! as URL );
+        return xmlContent;
+        
+        #elseif os( OSX )
+        
+        let fileManager = FileManager.default;
+        let userHomeDirectory = fileManager.homeDirectoryForCurrentUser;
+        let xmlUrl = userHomeDirectory.appendingPathComponent( self.xmlPath );
+        
+        let xmlContent = try String( contentsOf: xmlUrl, encoding: .utf8 );
+        return xmlContent;
+        
+        #endif
+        
     }
     
-    func getPath() -> String {
-        return self.xmlPath;
+    func getSbXml() throws -> Storybook {
+        //let xmlData = try self.getXMLContent();
+        return self.sbXml!;
     }
     
 }

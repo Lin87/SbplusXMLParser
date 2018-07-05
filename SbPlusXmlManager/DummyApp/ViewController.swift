@@ -11,7 +11,7 @@ import SbPlusXmlManager
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var pathDisplay: UILabel!
+    @IBOutlet weak var output: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,11 @@ class ViewController: UIViewController {
         
         let xmlMngr = SbXmlManager()
         
-        pathDisplay.text = xmlMngr.read( path: "Desktop/sbplus.xml" );
+        do {
+            output.text = try xmlMngr.read( path: "file:///Users/ethan.lin/Desktop/sbplu.xml" );
+        } catch let error as NSError {
+            output.text = error.localizedFailureReason;
+        }
         
     }
     

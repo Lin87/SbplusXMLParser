@@ -14,13 +14,13 @@ public class SbXmlManager {
     
     public init() {}
     
-    public func read( path: String ) -> String {
+    public func read( path: String ) throws -> String {
         
         let reader:SbXmlReader = SbXmlReader( path: path );
         
         //self.storybook = reader.getSbXml();
         
-        return reader.getPath();
+        return try reader.getXMLContent();
         
     }
     
