@@ -10,17 +10,13 @@
 
 import Foundation
 
-class SbXmlParser {
+class SbXmlReader {
     
     var xmlPath: String;
     var sbXml: Storybook?;
     
     init( path: String ) {
         self.xmlPath = path;
-    }
-    
-    func test() -> String {
-        return "SbXmlParser is working!";
     }
     
     func getSbXml() -> Storybook {

@@ -15,8 +15,8 @@
 		1B677E0E20EE749600CE97E8 /* SectionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0120EE749500CE97E8 /* SectionStruct.swift */; };
 		1B677E0F20EE749600CE97E8 /* SegmentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0220EE749500CE97E8 /* SegmentStruct.swift */; };
 		1B677E1020EE749600CE97E8 /* SegmentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0220EE749500CE97E8 /* SegmentStruct.swift */; };
-		1B677E1120EE749600CE97E8 /* ParserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ParserClass.swift */; };
-		1B677E1220EE749600CE97E8 /* ParserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ParserClass.swift */; };
+		1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
+		1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
 		1B677E1320EE749600CE97E8 /* SetupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0420EE749600CE97E8 /* SetupStruct.swift */; };
 		1B677E1420EE749600CE97E8 /* SetupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0420EE749600CE97E8 /* SetupStruct.swift */; };
 		1B677E1520EE749600CE97E8 /* QuestionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0520EE749600CE97E8 /* QuestionStruct.swift */; };
@@ -57,7 +57,7 @@
 /* Begin PBXFileReference section */
 		1B677E0120EE749500CE97E8 /* SectionStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionStruct.swift; sourceTree = "<group>"; };
 		1B677E0220EE749500CE97E8 /* SegmentStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentStruct.swift; sourceTree = "<group>"; };
-		1B677E0320EE749600CE97E8 /* ParserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserClass.swift; sourceTree = "<group>"; };
+		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
 		1B677E0420EE749600CE97E8 /* SetupStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupStruct.swift; sourceTree = "<group>"; };
 		1B677E0520EE749600CE97E8 /* QuestionStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStruct.swift; sourceTree = "<group>"; };
 		1B677E0620EE749600CE97E8 /* WriterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriterClass.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				1B677E0A20EE749600CE97E8 /* PageClass.swift */,
-				1B677E0320EE749600CE97E8 /* ParserClass.swift */,
+				1B677E0320EE749600CE97E8 /* ReaderClass.swift */,
 				1B677E0520EE749600CE97E8 /* QuestionStruct.swift */,
 				1B677E0B20EE749600CE97E8 /* QuizClass.swift */,
 				1B677E0720EE749600CE97E8 /* QuizFactory.swift */,
@@ -341,7 +341,7 @@
 				1B677E1F20EE749600CE97E8 /* PageClass.swift in Sources */,
 				1B677E1520EE749600CE97E8 /* QuestionStruct.swift in Sources */,
 				1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */,
-				1B677E1120EE749600CE97E8 /* ParserClass.swift in Sources */,
+				1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */,
 				1B677E1920EE749600CE97E8 /* QuizFactory.swift in Sources */,
 				1B677E1320EE749600CE97E8 /* SetupStruct.swift in Sources */,
 				1B677E0D20EE749600CE97E8 /* SectionStruct.swift in Sources */,
@@ -367,7 +367,7 @@
 				1B677E2020EE749600CE97E8 /* PageClass.swift in Sources */,
 				1B677E1620EE749600CE97E8 /* QuestionStruct.swift in Sources */,
 				1B677E2420EE749600CE97E8 /* SbXmlManager.swift in Sources */,
-				1B677E1220EE749600CE97E8 /* ParserClass.swift in Sources */,
+				1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */,
 				1B677E1A20EE749600CE97E8 /* QuizFactory.swift in Sources */,
 				1B677E1420EE749600CE97E8 /* SetupStruct.swift in Sources */,
 				1B677E0E20EE749600CE97E8 /* SectionStruct.swift in Sources */,

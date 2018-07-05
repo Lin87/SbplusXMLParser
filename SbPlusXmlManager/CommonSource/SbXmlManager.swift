@@ -14,7 +14,7 @@ public class SbXmlManager {
     
     public func read( path: String ) {
         
-        let reader:SbXmlParser = SbXmlParser( path: path );
+        let reader:SbXmlReader = SbXmlReader( path: path );
         
         self.storybook = reader.getSbXml();
         

@@ -20,10 +20,6 @@ class SbXmlWriter {
         
     }
     
-    func test() -> String {
-        return "SbXmlParser is working!";
-    }
-    
     func getSbXml() -> Storybook {
         return self.sbXml;
     }

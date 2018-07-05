@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Segment {
     
     var name: String;
