@@ -13,11 +13,6 @@
 		1B1E9FE820EE7E220048D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E9FE720EE7E220048D3D4 /* Assets.xcassets */; };
 		1B1E9FEB20EE7E220048D3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E9FE920EE7E220048D3D4 /* LaunchScreen.storyboard */; };
 		1B1E9FF320EE7E970048D3D4 /* SbPlusXmlManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */; };
-		1B3CDE9620EEC6B2007FC46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CDE9520EEC6B2007FC46F /* AppDelegate.swift */; };
-		1B3CDE9820EEC6B2007FC46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CDE9720EEC6B2007FC46F /* ViewController.swift */; };
-		1B3CDE9A20EEC6B2007FC46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B3CDE9920EEC6B2007FC46F /* Assets.xcassets */; };
-		1B3CDE9D20EEC6B2007FC46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3CDE9B20EEC6B2007FC46F /* Main.storyboard */; };
-		1B3CDEA420EEC86B007FC46F /* SbPlusXmlManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */; };
 		1B677DFD20EE706400CE97E8 /* SbPlusXmlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B677DFE20EE706700CE97E8 /* SbPlusXmlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B677DFF20EE707800CE97E8 /* SbPlusXmlManager_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA58A2520EE6FDB004D631F /* SbPlusXmlManager_iOSTests.swift */; };
@@ -34,6 +29,11 @@
 		1B677E2220EE749600CE97E8 /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0B20EE749600CE97E8 /* QuizClass.swift */; };
 		1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */; };
 		1B677E2420EE749600CE97E8 /* SbXmlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */; };
+		1B93B9BF20EFBBDF00381286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B9BE20EFBBDF00381286 /* AppDelegate.swift */; };
+		1B93B9C120EFBBDF00381286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B9C020EFBBDF00381286 /* ViewController.swift */; };
+		1B93B9C320EFBBDF00381286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B93B9C220EFBBDF00381286 /* Assets.xcassets */; };
+		1B93B9C620EFBBDF00381286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B93B9C420EFBBDF00381286 /* Main.storyboard */; };
+		1B93B9CC20EFBBF300381286 /* SbPlusXmlManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */; };
 		1BA589F520EE6E3F004D631F /* SbPlusXmlManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */; };
 		1BA58A1320EE6EB9004D631F /* SbPlusXmlManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */; };
 /* End PBXBuildFile section */
@@ -70,19 +70,19 @@
 		1B1E9FE720EE7E220048D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B1E9FEA20EE7E220048D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B1E9FEC20EE7E220048D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B3CDE9320EEC6B2007FC46F /* DummyAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DummyAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B3CDE9520EEC6B2007FC46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B3CDE9720EEC6B2007FC46F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1B3CDE9920EEC6B2007FC46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1B3CDE9C20EEC6B2007FC46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1B3CDE9E20EEC6B2007FC46F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B3CDE9F20EEC6B2007FC46F /* DummyAppMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DummyAppMac.entitlements; sourceTree = "<group>"; };
 		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
 		1B677E0620EE749600CE97E8 /* WriterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriterClass.swift; sourceTree = "<group>"; };
 		1B677E0720EE749600CE97E8 /* QuizFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizFactory.swift; sourceTree = "<group>"; };
 		1B677E0920EE749600CE97E8 /* StorybookClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookClass.swift; sourceTree = "<group>"; };
 		1B677E0B20EE749600CE97E8 /* QuizClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizClass.swift; sourceTree = "<group>"; };
 		1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlManager.swift; sourceTree = "<group>"; };
+		1B93B9BC20EFBBDF00381286 /* XmlMacTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XmlMacTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B93B9BE20EFBBDF00381286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1B93B9C020EFBBDF00381286 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B93B9C220EFBBDF00381286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B93B9C520EFBBDF00381286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B93B9C720EFBBDF00381286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B93B9C820EFBBDF00381286 /* XmlMacTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XmlMacTest.entitlements; sourceTree = "<group>"; };
 		1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbPlusXmlManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA589F420EE6E3F004D631F /* SbPlusXmlManager_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SbPlusXmlManager_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbPlusXmlManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,11 +102,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B3CDE9020EEC6B2007FC46F /* Frameworks */ = {
+		1B93B9B920EFBBDF00381286 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B3CDEA420EEC86B007FC46F /* SbPlusXmlManager.framework in Frameworks */,
+				1B93B9CC20EFBBF300381286 /* SbPlusXmlManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,17 +163,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1B3CDE9420EEC6B2007FC46F /* DummyAppMac */ = {
+		1B93B9BD20EFBBDF00381286 /* XmlMacTest */ = {
 			isa = PBXGroup;
 			children = (
-				1B3CDE9520EEC6B2007FC46F /* AppDelegate.swift */,
-				1B3CDE9720EEC6B2007FC46F /* ViewController.swift */,
-				1B3CDE9920EEC6B2007FC46F /* Assets.xcassets */,
-				1B3CDE9B20EEC6B2007FC46F /* Main.storyboard */,
-				1B3CDE9E20EEC6B2007FC46F /* Info.plist */,
-				1B3CDE9F20EEC6B2007FC46F /* DummyAppMac.entitlements */,
+				1B93B9BE20EFBBDF00381286 /* AppDelegate.swift */,
+				1B93B9C020EFBBDF00381286 /* ViewController.swift */,
+				1B93B9C220EFBBDF00381286 /* Assets.xcassets */,
+				1B93B9C420EFBBDF00381286 /* Main.storyboard */,
+				1B93B9C720EFBBDF00381286 /* Info.plist */,
+				1B93B9C820EFBBDF00381286 /* XmlMacTest.entitlements */,
 			);
-			path = DummyAppMac;
+			path = XmlMacTest;
 			sourceTree = "<group>";
 		};
 		1BA589E120EE6E3F004D631F = {
@@ -182,7 +182,7 @@
 				1BA58A2420EE6FDB004D631F /* CommonTests */,
 				1BA58A2120EE6F83004D631F /* CommonSource */,
 				1B1E9FDF20EE7E210048D3D4 /* DummyApp */,
-				1B3CDE9420EEC6B2007FC46F /* DummyAppMac */,
+				1B93B9BD20EFBBDF00381286 /* XmlMacTest */,
 				1BA589EC20EE6E3F004D631F /* Products */,
 				1B1E9FF220EE7E970048D3D4 /* Frameworks */,
 			);
@@ -196,7 +196,7 @@
 				1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */,
 				1BA58A1220EE6EB9004D631F /* SbplusXmlManager_macOSTests.xctest */,
 				1B1E9FDE20EE7E210048D3D4 /* DummyApp.app */,
-				1B3CDE9320EEC6B2007FC46F /* DummyAppMac.app */,
+				1B93B9BC20EFBBDF00381286 /* XmlMacTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,21 +264,21 @@
 			productReference = 1B1E9FDE20EE7E210048D3D4 /* DummyApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1B3CDE9220EEC6B2007FC46F /* DummyAppMac */ = {
+		1B93B9BB20EFBBDF00381286 /* XmlMacTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B3CDEA020EEC6B2007FC46F /* Build configuration list for PBXNativeTarget "DummyAppMac" */;
+			buildConfigurationList = 1B93B9C920EFBBDF00381286 /* Build configuration list for PBXNativeTarget "XmlMacTest" */;
 			buildPhases = (
-				1B3CDE8F20EEC6B2007FC46F /* Sources */,
-				1B3CDE9020EEC6B2007FC46F /* Frameworks */,
-				1B3CDE9120EEC6B2007FC46F /* Resources */,
+				1B93B9B820EFBBDF00381286 /* Sources */,
+				1B93B9B920EFBBDF00381286 /* Frameworks */,
+				1B93B9BA20EFBBDF00381286 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DummyAppMac;
-			productName = DummyAppMac;
-			productReference = 1B3CDE9320EEC6B2007FC46F /* DummyAppMac.app */;
+			name = XmlMacTest;
+			productName = XmlMacTest;
+			productReference = 1B93B9BC20EFBBDF00381286 /* XmlMacTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1BA589EA20EE6E3F004D631F /* SbPlusXmlManager_iOS */ = {
@@ -367,8 +367,13 @@
 					1B1E9FDD20EE7E210048D3D4 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
-					1B3CDE9220EEC6B2007FC46F = {
+					1B93B9BB20EFBBDF00381286 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					1BA589EA20EE6E3F004D631F = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -404,7 +409,7 @@
 				1BA58A0920EE6EB8004D631F /* SbplusXmlManager_macOS */,
 				1BA58A1120EE6EB9004D631F /* SbplusXmlManager_macOSTests */,
 				1B1E9FDD20EE7E210048D3D4 /* DummyApp */,
-				1B3CDE9220EEC6B2007FC46F /* DummyAppMac */,
+				1B93B9BB20EFBBDF00381286 /* XmlMacTest */,
 			);
 		};
 /* End PBXProject section */
@@ -420,12 +425,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B3CDE9120EEC6B2007FC46F /* Resources */ = {
+		1B93B9BA20EFBBDF00381286 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B3CDE9A20EEC6B2007FC46F /* Assets.xcassets in Resources */,
-				1B3CDE9D20EEC6B2007FC46F /* Main.storyboard in Resources */,
+				1B93B9C320EFBBDF00381286 /* Assets.xcassets in Resources */,
+				1B93B9C620EFBBDF00381286 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,12 +474,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B3CDE8F20EEC6B2007FC46F /* Sources */ = {
+		1B93B9B820EFBBDF00381286 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B3CDE9820EEC6B2007FC46F /* ViewController.swift in Sources */,
-				1B3CDE9620EEC6B2007FC46F /* AppDelegate.swift in Sources */,
+				1B93B9C120EFBBDF00381286 /* ViewController.swift in Sources */,
+				1B93B9BF20EFBBDF00381286 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,10 +562,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		1B3CDE9B20EEC6B2007FC46F /* Main.storyboard */ = {
+		1B93B9C420EFBBDF00381286 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1B3CDE9C20EEC6B2007FC46F /* Base */,
+				1B93B9C520EFBBDF00381286 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -604,44 +609,44 @@
 			};
 			name = Release;
 		};
-		1B3CDEA120EEC6B2007FC46F /* Debug */ = {
+		1B93B9CA20EFBBDF00381286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DummyAppMac/DummyAppMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = XmlMacTest/XmlMacTest.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D8MAJNQ7E6;
-				INFOPLIST_FILE = DummyAppMac/Info.plist;
+				INFOPLIST_FILE = XmlMacTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.DummyAppMac;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.XmlMacTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		1B3CDEA220EEC6B2007FC46F /* Release */ = {
+		1B93B9CB20EFBBDF00381286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DummyAppMac/DummyAppMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = XmlMacTest/XmlMacTest.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D8MAJNQ7E6;
-				INFOPLIST_FILE = DummyAppMac/Info.plist;
+				INFOPLIST_FILE = XmlMacTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.DummyAppMac;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.media.uwex.XmlMacTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -974,11 +979,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B3CDEA020EEC6B2007FC46F /* Build configuration list for PBXNativeTarget "DummyAppMac" */ = {
+		1B93B9C920EFBBDF00381286 /* Build configuration list for PBXNativeTarget "XmlMacTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B3CDEA120EEC6B2007FC46F /* Debug */,
-				1B3CDEA220EEC6B2007FC46F /* Release */,
+				1B93B9CA20EFBBDF00381286 /* Debug */,
+				1B93B9CB20EFBBDF00381286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

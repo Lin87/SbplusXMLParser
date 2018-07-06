@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let xmlMngr = SbXmlManager()
         
         do {
-            output.text = try xmlMngr.read( path: "file:///Users/ethan.lin/Desktop/sbplu.xml" );
+            output.text = try xmlMngr.read( path: "https://media.uwex.edu/sandbox/ethan/gvp_v4/gvp.xml" );
         } catch let error as NSError {
             output.text = error.localizedFailureReason;
         }

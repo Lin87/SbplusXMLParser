@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  DummyAppMac
+//  XmlMacTest
 //
-//  Created by Ethan Lin on 7/5/18.
+//  Created by Ethan Lin on 7/6/18.
 //  Copyright © 2018 University of Wisconsin System Office of Academic and Student Affairs. All rights reserved.
 //
 
