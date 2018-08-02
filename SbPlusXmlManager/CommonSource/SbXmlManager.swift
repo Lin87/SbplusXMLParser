@@ -10,17 +10,27 @@ import Foundation
 
 public class SbXmlManager {
     
+    var reader: SbXmlReader?;
     var storybook: Storybook?;
     
     public init() {}
     
-    public func read( path: String ) throws -> String {
+    public func read( path: String ) throws {
         
-        let reader:SbXmlReader = SbXmlReader( path: path );
+        self.reader = SbXmlReader( path: path );
+        try self.reader!.readXml();
         
-        //self.storybook = reader.getSbXml();
+    }
+    
+    public func parse() {
+
+        self.reader!.parseXml();
+
+    }
+    
+    public func getXmlString() -> String {
         
-        return try reader.getXMLContent();
+        return self.reader!.getXmlString();
         
     }
     

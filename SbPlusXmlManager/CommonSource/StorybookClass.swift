@@ -38,18 +38,28 @@ public class Storybook {
         
     }
     
+    convenience public init( accent: String, imgFormat: String, splashFormat: String, analytics: Bool, mathJax: Bool, version: String ) {
+        
+        self.init( accent: accent, imgFormat: imgFormat, splashFormat: splashFormat, analytics: analytics, mathJax: mathJax, setup: Setup(program: "", course: "", title: "", subtitle: "", length: "", authorName: "", authorProfile: "", generalInfo: ""), sections: [], version: version );
+        
+    }
+    
+    public func toString() -> String {
+        return self.accent;
+    }
+    
 }
 
 public struct Setup {
     
-    var program: String?;
-    var course: String?;
-    var title: String;
-    var subtitle: String;
-    var length: String;
+    var program: String = "";
+    var course: String = "";
+    var title: String = "";
+    var subtitle: String = "";
+    var length: String = "";
     var authorName: String;
-    var authorProfile: String?;
-    var generalInfo: String?;
+    var authorProfile: String = "";
+    var generalInfo: String = "";
     
 }
 
@@ -63,7 +73,7 @@ public struct Section {
 public class Page {
     
     var type: String;
-    var src: String?;
+    var src: String;
     var title: String;
     var transition: String?;
     var notes: String?;
