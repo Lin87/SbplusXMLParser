@@ -40,26 +40,141 @@ public class Storybook {
     
     convenience public init( accent: String, imgFormat: String, splashFormat: String, analytics: Bool, mathJax: Bool, version: String ) {
         
-        self.init( accent: accent, imgFormat: imgFormat, splashFormat: splashFormat, analytics: analytics, mathJax: mathJax, setup: Setup(program: "", course: "", title: "", subtitle: "", length: "", authorName: "", authorProfile: "", generalInfo: ""), sections: [], version: version );
+        self.init( accent: accent, imgFormat: imgFormat, splashFormat: splashFormat, analytics: analytics, mathJax: mathJax, setup: Setup(), sections: [], version: version );
         
     }
     
     public func toString() -> String {
-        return self.accent;
+        return self.accent + " | " + self.pageImgFormat + " | " + self.splashImgFormat + " | " + self.analytics.description + " | " + self.mathJax.description + " | " +  self.version + " | " + self.setup.program + " | " + self.setup.course + " | " + self.setup.title + " | " + self.setup.subtitle + " | " + self.setup.length + " | " + self.setup.authorName + " | " + self.setup.authorProfile + " | " + self.setup.generalInfo;
+    }
+    
+    public func setSetup( setup: Setup ) {
+        self.setup = setup;
     }
     
 }
 
 public struct Setup {
     
-    var program: String = "";
-    var course: String = "";
-    var title: String = "";
-    var subtitle: String = "";
-    var length: String = "";
-    var authorName: String;
-    var authorProfile: String = "";
-    var generalInfo: String = "";
+    private var _program: String = "";
+    private var _course:String = "";
+    private var _title:String = "";
+    private var _subtitle:String = "";
+    private var _length: String = "";
+    private var _authorName:String = "";
+    private var _authorProfile:String = "";
+    private var _generalInfo:String = "";
+    
+    var program: String {
+        
+        get {
+            
+            return self._program;
+            
+        }
+        
+        set {
+            self._program = newValue;
+        }
+        
+    };
+    
+    var course: String {
+        
+        get {
+            
+            return self._course;
+            
+        }
+        
+        set {
+            self._course = newValue;
+        }
+        
+    };
+    var title: String {
+        
+        get {
+            
+            return self._title;
+            
+        }
+        
+        set {
+            self._title = newValue;
+        }
+        
+    };
+    
+    var subtitle: String {
+        
+        get {
+            
+            return self._subtitle;
+            
+        }
+        
+        set {
+            self._subtitle = newValue;
+        }
+        
+    };
+    
+    var length: String {
+        
+        get {
+            
+            return self._length;
+            
+        }
+        
+        set {
+            self._length = newValue;
+        }
+        
+    };
+    
+    var authorName: String {
+        
+        get {
+            
+            return self._authorName;
+            
+        }
+        
+        set {
+            self._authorName = newValue;
+        }
+        
+    };
+    
+    var authorProfile: String {
+        
+        get {
+            
+            return self._authorProfile;
+            
+        }
+        
+        set {
+            self._authorProfile = newValue;
+        }
+        
+    };
+    
+    var generalInfo: String {
+        
+        get {
+            
+            return self._generalInfo;
+            
+        }
+        
+        set {
+            self._generalInfo = newValue;
+        }
+        
+    };
     
 }
 

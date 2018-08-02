@@ -15,6 +15,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     var xmlPath: String = "";
     var xmlString: String = "";
     var sbXml: Storybook?;
+    var sbXmlSetup: Setup = Setup();
     var foundCharacters: String = "";
     
     init( path: String ) {
@@ -43,6 +44,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     
     func parser( _: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] ) {
         
+        // get attributes from the storybook element
         if ( elementName == "storybook" ) {
             
             let accent: String? = attributeDict["accent"];
@@ -73,28 +75,73 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 
                 self.sbXml = Storybook( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, version: version! );
                 
-                print("SB+: \(self.sbXml!.toString())");
-                
             }
+            
+        }
+        
+        if ( elementName == "setup" ) {
+            
+            let program: String? = attributeDict["program"];
+            let course: String? = attributeDict["course"];
+            
+            self.sbXmlSetup.program = program!;
+            self.sbXmlSetup.course = course!;
+            
+        }
+        
+        if ( elementName == "author" ) {
+            
+            let name: String? = attributeDict["name"];
+            
+            self.sbXmlSetup.authorName = name!;
             
         }
         
     }
     
     func parser( _: XMLParser, foundCharacters string: String) {
-        self.foundCharacters += string;
+        
+        self.foundCharacters += string.trimmingCharacters(in: .whitespacesAndNewlines);
+        
     }
     
     func parser( _: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-    
+        
+        if ( elementName == "title" ) {
+            self.sbXmlSetup.title = self.foundCharacters;
+        }
+        
+        if ( elementName == "subtitle" ) {
+            self.sbXmlSetup.subtitle = self.foundCharacters;
+        }
+        
+        if ( elementName == "length" ) {
+            self.sbXmlSetup.length = self.foundCharacters;
+        }
+        
+        if ( elementName == "author" ) {
+            self.sbXmlSetup.authorProfile = self.foundCharacters;
+        }
+        
+        if ( elementName == "generalInfo" ) {
+            self.sbXmlSetup.generalInfo = self.foundCharacters;
+        }
+        
+        self.foundCharacters = "";
+        
     }
     
     func parserDidStartDocument( _: XMLParser ) {
-        print("started");
+        //print("started");
     }
     
     func parserDidEndDocument( _: XMLParser ) {
-        print("ended");
+        
+        if ( self.sbXml != nil ) {
+            self.sbXml!.setSetup( setup: self.sbXmlSetup );
+        }
+        
+        print(self.sbXml!.toString());
     }
     
     func getSbXml() throws -> Storybook {
