@@ -16,7 +16,7 @@ public class Quiz: Page {
         
         self.questionDelegate = QuizFactory.getQuestion( type: type, question: question );
         
-        super.init(type: type, src: "", title: title, transition: transition, notes: "", widget: [Segment]() );
+        super.init();
         
     }
     

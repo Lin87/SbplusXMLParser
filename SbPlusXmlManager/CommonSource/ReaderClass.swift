@@ -12,33 +12,39 @@ import Foundation
 
 class SbXmlReader: NSObject, XMLParserDelegate {
     
-    var xmlPath: String = "";
-    var xmlString: String = "";
-    var sbXml: Storybook?;
-    var sbXmlSetup: Setup = Setup();
-    var foundCharacters: String = "";
+    var xmlPath: String = ""
+    var xmlString: String = ""
+    var sbXml: Storybook?
+    var sbXmlSetup: Setup = Setup()
+    var foundCharacters: String = ""
+    
+    private var _tempSection: Section = Section()
+    private var _tempPageArray: Array<Page> = []
+    private var _tempPage: Page = Page()
+    private var _tempSegment: Segment = Segment()
+    private var _tempFrame: Frame = Frame()
     
     init( path: String ) {
-        self.xmlPath = path;
+        self.xmlPath = path
     }
     
     func readXml() throws {
-        self.xmlString = try String( contentsOf: NSURL( string: self.xmlPath )! as URL );
+        self.xmlString = try String( contentsOf: NSURL( string: self.xmlPath )! as URL )
     }
     
     func parseXml() {
         
-        let xmlData = self.xmlString.data(using: String.Encoding.utf8, allowLossyConversion: true )!;
-        let parser = XMLParser( data: xmlData );
+        let xmlData = self.xmlString.data(using: String.Encoding.utf8, allowLossyConversion: true )!
+        let parser = XMLParser( data: xmlData )
         
-        parser.delegate = self;
-        parser.parse();
+        parser.delegate = self
+        parser.parse()
         
     }
     
     func getXmlString() -> String {
         
-        return self.xmlString;
+        return self.xmlString
         
     }
     
@@ -47,16 +53,16 @@ class SbXmlReader: NSObject, XMLParserDelegate {
         // get attributes from the storybook element
         if ( elementName == "storybook" ) {
             
-            let accent: String? = attributeDict["accent"];
-            let imgFormat: String? = attributeDict["pageImgFormat"];
-            let splashFormat: String? = attributeDict["splashImgFormat"];
-            var analytics: Bool = false;
-            var mathjax: Bool = false;
+            let accent: String? = attributeDict["accent"]
+            let imgFormat: String? = attributeDict["pageImgFormat"]
+            let splashFormat: String? = attributeDict["splashImgFormat"]
+            var analytics: Bool = false
+            var mathjax: Bool = false
             
             if let analyticsAttr: String = attributeDict["analytics"] {
                 
                 if ( analyticsAttr.lowercased() == "yes" || analyticsAttr.lowercased() == "true" || analyticsAttr.lowercased() == "on" ) {
-                    analytics = true;
+                    analytics = true
                 }
                 
             }
@@ -64,16 +70,16 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             if let mathjaxAttr: String = attributeDict["mathjax"] {
                 
                 if ( mathjaxAttr.lowercased() == "yes" || mathjaxAttr.lowercased() == "true" || mathjaxAttr.lowercased() == "on" ) {
-                    mathjax = true;
+                    mathjax = true
                 }
                 
             }
             
-            let version: String? = attributeDict["xmlVersion"];
+            let version: String? = attributeDict["xmlVersion"]
             
             if ( self.sbXml == nil ) {
                 
-                self.sbXml = Storybook( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, version: version! );
+                self.sbXml = Storybook( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, version: version! )
                 
             }
             
@@ -81,19 +87,70 @@ class SbXmlReader: NSObject, XMLParserDelegate {
         
         if ( elementName == "setup" ) {
             
-            let program: String? = attributeDict["program"];
-            let course: String? = attributeDict["course"];
+            let program: String? = attributeDict["program"]
+            let course: String? = attributeDict["course"]
             
-            self.sbXmlSetup.program = program!;
-            self.sbXmlSetup.course = course!;
+            self.sbXmlSetup.program = program!
+            self.sbXmlSetup.course = course!
             
         }
         
         if ( elementName == "author" ) {
             
-            let name: String? = attributeDict["name"];
+            let name: String? = attributeDict["name"]
             
-            self.sbXmlSetup.authorName = name!;
+            self.sbXmlSetup.authorName = name!
+            
+        }
+        
+        if ( elementName == "section" ) {
+            
+            let title: String? = attributeDict["title"]
+            
+            self._tempSection.title = title!
+            
+        }
+        
+        if ( elementName == "page" ) {
+            
+            let type: String? = attributeDict["type"]
+            let title: String? = attributeDict["title"]
+            
+            
+            if ( type! != "quiz" ) {
+                
+                let src: String? = attributeDict["src"]
+                let transition: String? = attributeDict["transition"]
+                
+                self._tempPage.src = src!
+                
+                if ( transition != nil ) {
+                    
+                    self._tempPage.transition = transition!
+                    
+                }
+                
+            }
+            
+            self._tempPage.type = type!
+            self._tempPage.title = title!
+            
+            
+        }
+        
+        if ( elementName == "segment" ) {
+            
+            let name: String? = attributeDict["name"]
+            
+            self._tempSegment.name = name!
+            
+        }
+        
+        if ( elementName == "frame" ) {
+            
+            let start: String? = attributeDict["start"]
+            
+            self._tempFrame.start = start!
             
         }
         
@@ -101,52 +158,89 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     
     func parser( _: XMLParser, foundCharacters string: String) {
         
-        self.foundCharacters += string.trimmingCharacters(in: .whitespacesAndNewlines);
+        self.foundCharacters += string.trimmingCharacters(in: .whitespacesAndNewlines)
         
     }
     
     func parser( _: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
         if ( elementName == "title" ) {
-            self.sbXmlSetup.title = self.foundCharacters;
+            self.sbXmlSetup.title = self.foundCharacters
         }
         
         if ( elementName == "subtitle" ) {
-            self.sbXmlSetup.subtitle = self.foundCharacters;
+            self.sbXmlSetup.subtitle = self.foundCharacters
         }
         
         if ( elementName == "length" ) {
-            self.sbXmlSetup.length = self.foundCharacters;
+            self.sbXmlSetup.length = self.foundCharacters
         }
         
         if ( elementName == "author" ) {
-            self.sbXmlSetup.authorProfile = self.foundCharacters;
+            self.sbXmlSetup.authorProfile = self.foundCharacters
         }
         
         if ( elementName == "generalInfo" ) {
-            self.sbXmlSetup.generalInfo = self.foundCharacters;
+            self.sbXmlSetup.generalInfo = self.foundCharacters
         }
         
-        self.foundCharacters = "";
+        if ( elementName == "section" ) {
+            
+            self._tempSection.pages = self._tempPageArray
+            self.sbXml?.addSection( section: self._tempSection )
+            self._tempPageArray.removeAll()
+            self._tempSection = Section()
+            
+        }
+        
+        if ( elementName == "page" ) {
+            
+            self._tempPageArray.append( self._tempPage )
+            self._tempPage = Page()
+            
+        }
+        
+        if ( elementName == "note" ) {
+            
+            self._tempPage.notes = self.foundCharacters
+            
+        }
+        
+        if ( elementName == "segment" ) {
+            
+            self._tempSegment.content = self.foundCharacters
+            self._tempPage.addSegment( segment: self._tempSegment )
+            self._tempSegment = Segment()
+            
+        }
+        
+        if ( elementName == "frame" ) {
+            
+            self._tempPage.addFrame( frame: self._tempFrame )
+            self._tempFrame = Frame()
+            
+        }
+        
+        self.foundCharacters = ""
         
     }
     
     func parserDidStartDocument( _: XMLParser ) {
-        //print("started");
+        //print("started")
     }
     
     func parserDidEndDocument( _: XMLParser ) {
         
         if ( self.sbXml != nil ) {
-            self.sbXml!.setSetup( setup: self.sbXmlSetup );
+            self.sbXml!.setSetup( setup: self.sbXmlSetup )
         }
         
-        print(self.sbXml!.toString());
+        print(self.sbXml!.getSectionString())
     }
     
     func getSbXml() throws -> Storybook {
-        //let xmlData = try self.getXMLContent();
-        return self.sbXml!;
+        //let xmlData = try self.getXMLContent()
+        return self.sbXml!
     }
     
 }
