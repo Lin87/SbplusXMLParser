@@ -14,7 +14,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     
     var xmlPath: String = ""
     var xmlString: String = ""
-    var sbXml: Storybook?
+    var sbXml: StorybookXml?
     var sbXmlSetup: Setup = Setup()
     var foundCharacters: String = ""
     
@@ -25,11 +25,15 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     private var _tempFrame: Frame = Frame()
     
     init( path: String ) {
+        
         self.xmlPath = path
+        
     }
     
     func readXml() throws {
+        
         self.xmlString = try String( contentsOf: NSURL( string: self.xmlPath )! as URL )
+        
     }
     
     func parseXml() {
@@ -62,7 +66,9 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             if let analyticsAttr: String = attributeDict["analytics"] {
                 
                 if ( analyticsAttr.lowercased() == "yes" || analyticsAttr.lowercased() == "true" || analyticsAttr.lowercased() == "on" ) {
+                    
                     analytics = true
+                    
                 }
                 
             }
@@ -70,7 +76,9 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             if let mathjaxAttr: String = attributeDict["mathjax"] {
                 
                 if ( mathjaxAttr.lowercased() == "yes" || mathjaxAttr.lowercased() == "true" || mathjaxAttr.lowercased() == "on" ) {
+                    
                     mathjax = true
+                    
                 }
                 
             }
@@ -79,7 +87,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             if ( self.sbXml == nil ) {
                 
-                self.sbXml = Storybook( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, version: version! )
+                self.sbXml = StorybookXml( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, version: version! )
                 
             }
             
@@ -116,7 +124,6 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             let type: String? = attributeDict["type"]
             let title: String? = attributeDict["title"]
             
-            
             if ( type! != "quiz" ) {
                 
                 let src: String? = attributeDict["src"]
@@ -134,7 +141,6 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             self._tempPage.type = type!
             self._tempPage.title = title!
-            
             
         }
         
@@ -165,23 +171,33 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     func parser( _: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
         if ( elementName == "title" ) {
+            
             self.sbXmlSetup.title = self.foundCharacters
+            
         }
         
         if ( elementName == "subtitle" ) {
+            
             self.sbXmlSetup.subtitle = self.foundCharacters
+            
         }
         
         if ( elementName == "length" ) {
+            
             self.sbXmlSetup.length = self.foundCharacters
+            
         }
         
         if ( elementName == "author" ) {
+            
             self.sbXmlSetup.authorProfile = self.foundCharacters
+            
         }
         
         if ( elementName == "generalInfo" ) {
+            
             self.sbXmlSetup.generalInfo = self.foundCharacters
+            
         }
         
         if ( elementName == "section" ) {
@@ -235,12 +251,13 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             self.sbXml!.setSetup( setup: self.sbXmlSetup )
         }
         
-        print(self.sbXml!.getSectionString())
+        print(self.sbXml!.toString())
     }
     
-    func getSbXml() throws -> Storybook {
-        //let xmlData = try self.getXMLContent()
+    func getSbXml() throws -> StorybookXml {
+        
         return self.sbXml!
+        
     }
     
 }

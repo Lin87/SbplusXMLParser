@@ -1,5 +1,5 @@
 //
-//  StorybookClass.swift
+//  StorybookXmlClass.swift
 //  SbplusXMLManager
 //
 //  Created by Ethan Lin on 6/27/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Storybook {
+public class StorybookXml {
     
     var accent: String
     var pageImgFormat: String
@@ -45,7 +45,9 @@ public class Storybook {
     }
     
     public func toString() -> String {
-        return self.accent + " | " + self.pageImgFormat + " | " + self.splashImgFormat + " | " + self.analytics.description + " | " + self.mathJax.description + " | " +  self.version + " | " + self.setup.program + " | " + self.setup.course + " | " + self.setup.title + " | " + self.setup.subtitle + " | " + self.setup.length + " | " + self.setup.authorName + " | " + self.setup.authorProfile + " | " + self.setup.generalInfo
+        
+        return self.accent + " | " + self.pageImgFormat + " | " + self.splashImgFormat + " | " + self.analytics.description + " | " + self.mathJax.description + " | " +  self.version + " | " + self.setup.program + " | " + self.setup.course + " | " + self.setup.title + " | " + self.setup.subtitle + " | " + self.setup.length + " | " + self.setup.authorName + " >> " + self.setup.authorProfile + " | " + self.setup.generalInfo + "\n" + self.getSectionString()
+        
     }
     
     public func getSectionString() -> String {
@@ -85,11 +87,15 @@ public class Storybook {
     }
     
     public func setSetup( setup: Setup ) {
+        
         self.setup = setup
+        
     }
     
     public func addSection( section: Section ) {
+        
         self.sections.append( section )
+        
     }
     
 }
@@ -114,7 +120,9 @@ public struct Setup {
         }
         
         set {
+            
             self._program = newValue
+            
         }
         
     }
@@ -128,7 +136,9 @@ public struct Setup {
         }
         
         set {
+            
             self._course = newValue
+            
         }
         
     }
@@ -141,7 +151,9 @@ public struct Setup {
         }
         
         set {
+            
             self._title = newValue
+            
         }
         
     }
@@ -155,7 +167,9 @@ public struct Setup {
         }
         
         set {
+            
             self._subtitle = newValue
+            
         }
         
     }
@@ -169,7 +183,9 @@ public struct Setup {
         }
         
         set {
+            
             self._length = newValue
+            
         }
         
     }
@@ -183,7 +199,9 @@ public struct Setup {
         }
         
         set {
+            
             self._authorName = newValue
+            
         }
         
     }
@@ -197,7 +215,9 @@ public struct Setup {
         }
         
         set {
+            
             self._authorProfile = newValue
+            
         }
         
     }
@@ -211,7 +231,9 @@ public struct Setup {
         }
         
         set {
+            
             self._generalInfo = newValue
+            
         }
         
     }

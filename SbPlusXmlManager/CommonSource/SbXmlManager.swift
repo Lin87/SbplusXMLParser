@@ -11,7 +11,7 @@ import Foundation
 public class SbXmlManager {
     
     var reader: SbXmlReader?;
-    var storybook: Storybook?;
+    var storybook: StorybookXml?;
     
     public init() {}
     
@@ -34,7 +34,7 @@ public class SbXmlManager {
         
     }
     
-    public func write( path: String, storybook: Storybook ) {
+    public func write( path: String, storybook: StorybookXml ) {
         
         let writer: SbXmlWriter = SbXmlWriter( path: path, storybook: storybook );
         

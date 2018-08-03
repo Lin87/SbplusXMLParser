@@ -11,17 +11,19 @@ import Foundation
 class SbXmlWriter {
     
     var xmlDestination: String;
-    var sbXml: Storybook;
+    var sbXml: StorybookXml;
     
-     init( path: String, storybook: Storybook ) {
+     init( path: String, storybook: StorybookXml ) {
         
         self.xmlDestination = path;
         self.sbXml = storybook;
         
     }
     
-    func getSbXml() -> Storybook {
+    func getSbXml() -> StorybookXml {
+        
         return self.sbXml;
+        
     }
     
 }
