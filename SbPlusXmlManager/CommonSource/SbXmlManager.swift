@@ -34,6 +34,12 @@ public class SbXmlManager {
         
     }
     
+    public func getSbXml() -> StorybookXml {
+        
+        return self.reader!.getSbXml()
+        
+    }
+    
     public func write( path: String, storybook: StorybookXml ) {
         
         let writer: SbXmlWriter = SbXmlWriter( path: path, storybook: storybook );

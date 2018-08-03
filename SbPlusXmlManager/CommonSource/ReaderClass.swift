@@ -22,7 +22,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     private var _tempPageArray: Array<Page> = []
     private var _tempPage: Page = Page()
     private var _tempSegment: Segment = Segment()
-    private var _tempFrame: Frame = Frame()
+    private var _tempFrame: String = ""
     
     init( path: String ) {
         
@@ -87,7 +87,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             if ( self.sbXml == nil ) {
                 
-                self.sbXml = StorybookXml( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, version: version! )
+                self.sbXml = StorybookXml( accent: accent!, imgFormat: imgFormat!, splashFormat: splashFormat!, analytics: analytics, mathJax: mathjax, xmlVersion: version! )
                 
             }
             
@@ -156,7 +156,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             let start: String? = attributeDict["start"]
             
-            self._tempFrame.start = start!
+            self._tempFrame = start!
             
         }
         
@@ -233,7 +233,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
         if ( elementName == "frame" ) {
             
             self._tempPage.addFrame( frame: self._tempFrame )
-            self._tempFrame = Frame()
+            self._tempFrame = ""
             
         }
         
@@ -251,10 +251,9 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             self.sbXml!.setSetup( setup: self.sbXmlSetup )
         }
         
-        print(self.sbXml!.toString())
     }
     
-    func getSbXml() throws -> StorybookXml {
+    func getSbXml() -> StorybookXml {
         
         return self.sbXml!
         

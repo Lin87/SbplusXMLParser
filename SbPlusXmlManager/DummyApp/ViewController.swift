@@ -30,8 +30,8 @@ class ViewController: UIViewController {
         
         do {
             try xmlMngr.read( path: "file:///Volumes/Macintosh%20HD/Users/ethan.lin/Desktop/sbplus.xml" );
-            output.text = xmlMngr.getXmlString();
             xmlMngr.parse();
+            output.text = xmlMngr.getSbXml().toString();
         } catch let error as NSError {
             output.text = error.localizedFailureReason;
         }
