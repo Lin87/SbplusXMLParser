@@ -100,7 +100,7 @@ public class StorybookXml {
             /// loop through pages within a section
             for page in section.pages {
                 
-                sectionString += page.type + " | " + page.src + " | " + page.title + " | " + page.transition  + " | " + page.notes  + " | "
+                sectionString += page.type + " | " + page.src + " | " + page.title + " | " + page.transition  + " | Embed >> " + String( page.embed ) + " | " + page.notes  + " | "
                 
                 /// loop through segments within a page
                 for segment in page.widget {
@@ -121,6 +121,11 @@ public class StorybookXml {
                     
                     sectionString += "Quiz >> " + page.quiz.generateXML() + " | "
                     
+                }
+                
+                // get audio if it is html
+                if( page.type == "html" && !page.audio.isEmpty ) {
+                    sectionString += "htmlAudio >> " + page.audio
                 }
                 
                 sectionString += "\n\n"
@@ -345,10 +350,12 @@ public class Page {
     private var _src: String = ""
     private var _title: String = ""
     private var _transition: String = ""
+    private var _embed: Bool = false
     private var _notes: String = ""
     private var _widget: Array<Segment> = []
     private var _frames: Array<String> = []
     private var _quiz: QuizItem = QuizItem( type: "" )
+    private var _audio: String = ""
     
     var type: String {
         
@@ -414,6 +421,22 @@ public class Page {
         
     }
     
+    var embed: Bool {
+        
+        get {
+            
+            return self._embed
+            
+        }
+        
+        set {
+            
+            self._embed = newValue
+            
+        }
+        
+    }
+    
     var notes: String {
         
         get {
@@ -461,6 +484,22 @@ public class Page {
         set {
             
             self._quiz = newValue
+            
+        }
+        
+    }
+    
+    var audio: String {
+        
+        get {
+            
+            return self._audio
+            
+        }
+        
+        set {
+            
+            self._audio = newValue
             
         }
         

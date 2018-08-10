@@ -131,6 +131,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 
                 let src: String? = attributeDict["src"]
                 let transition: String? = attributeDict["transition"]
+                let embed: String? = attributeDict["embed"]
                 
                 self._tempPage.src = src!
                 
@@ -140,10 +141,26 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                     
                 }
                 
+                if ( embed != nil && embed! == "yes" ) {
+                    self._tempPage.embed = true
+                }
+                
             }
             
             self._tempPage.type = type!
             self._tempPage.title = title!
+            
+        }
+        
+        if ( elementName == "audio" ) {
+            
+            if ( self._tempPage.type == "html" ) {
+                
+                let audio: String? = attributeDict["src"]
+                
+                self._tempPage.audio = audio!
+                
+            }
             
         }
         
