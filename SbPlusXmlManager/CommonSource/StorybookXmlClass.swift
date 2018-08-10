@@ -116,6 +116,13 @@ public class StorybookXml {
                     
                 }
                 
+                // get quiz item if quiz type
+                if ( page.type == "quiz" ) {
+                    
+                    sectionString += "Quiz >> " + page.quiz.generateXML() + " | "
+                    
+                }
+                
                 sectionString += "\n\n"
                 
             }
@@ -341,6 +348,7 @@ public class Page {
     private var _notes: String = ""
     private var _widget: Array<Segment> = []
     private var _frames: Array<String> = []
+    private var _quiz: QuizItem = QuizItem( type: "" )
     
     var type: String {
         
@@ -442,6 +450,22 @@ public class Page {
         
     }
     
+    var quiz: QuizItem {
+        
+        get {
+            
+            return self._quiz
+            
+        }
+        
+        set {
+            
+            self._quiz = newValue
+            
+        }
+        
+    }
+    
     // an empty init for flexibility
     public init() {}
     
@@ -502,6 +526,262 @@ public struct Segment {
         set {
             
             self._content = newValue
+            
+        }
+        
+    }
+    
+}
+
+// structs to hold related quiz elements for Storybook Plus page
+
+public class QuizItem {
+    
+    private var _question: [String: String] = [:]
+    private var _type: String = ""
+    private var _feedback: Feedback = Feedback()
+    private var _choices: Array<[String: String]> = []
+    private var _random: Bool = false
+    private var _answer: String = ""
+    
+    var question: [String: String] {
+        
+        get {
+            
+            return self._question
+            
+        }
+        
+        set {
+            
+            self._question = newValue
+            
+        }
+        
+    }
+    
+    var type: String {
+        
+        get {
+            
+            return self._type
+            
+        }
+        
+    }
+    
+    var feedback: Feedback {
+        
+        get {
+            
+            return self._feedback;
+            
+        }
+        
+        set {
+            
+            self._feedback = newValue
+            
+        }
+        
+    }
+    
+    var choices: Array<[String: String]> {
+        
+        get {
+            
+            return self._choices
+            
+        }
+        
+        set {
+            
+            self._choices = newValue
+            
+        }
+        
+    }
+    
+    var random: Bool {
+        
+        get {
+            
+            return self._random
+            
+        }
+        
+        set {
+            
+            self._random = newValue
+            
+        }
+        
+    }
+    
+    var answer: String {
+        
+        get {
+            
+            return self._answer
+            
+        }
+        
+        set {
+            
+            self._answer = newValue
+            
+        }
+        
+    }
+    
+    public init( type: String ) {
+        
+        self._type = type
+        
+    }
+    
+    func generateXML() -> String {
+        return ""
+    }
+    
+}
+
+public class ShortAnswer: QuizItem {
+    
+    public init() {
+        
+        super.init(type: "shortAnswer")
+        
+    }
+    
+    override public func generateXML() -> String {
+        return self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Feedback >> " + self.feedback.simple
+    }
+    
+}
+
+public class FillInTheBlank: QuizItem {
+    
+    public init() {
+        
+        super.init( type: "fillInTheBlank" )
+        
+    }
+    
+    override public func generateXML() -> String {
+        
+        return self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Answer >> " + self.answer + " | C Feedback >> " + self.feedback.correct + " | I Feedback >> " + self.feedback.incorrect
+    }
+    
+}
+
+public class MultipleChoiceSingle: QuizItem {
+    
+    public init() {
+        
+        super.init( type: "multipleChoiceSingle" )
+        
+    }
+    
+    override public func generateXML() -> String {
+        
+        var xml:String = self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Random >> " + String( self.random ) + " | Choices >> "
+        
+        for answer in self.choices {
+            
+            for ( key, value ) in answer {
+                
+                xml += key + " : " + value + " | "
+                
+            }
+            
+        }
+        
+        return xml
+        
+    }
+    
+}
+
+public class MultipleChoiceMultiple: QuizItem {
+    
+    public init() {
+        
+        super.init( type: "multipleChoiceMultiple" )
+        
+    }
+    
+    override public func generateXML() -> String {
+        
+        var xml:String = self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Random >> " + String( self.random ) + " | Choices >> "
+        
+        for answer in self.choices {
+            
+            for ( key, value ) in answer {
+                
+                xml += key + " : " + value + " | "
+                
+            }
+            
+        }
+        
+        xml += " | C Feedback >> " + self.feedback.correct + " | I Feedback >> " + self.feedback.incorrect
+        
+        return xml
+        
+    }
+    
+}
+
+public struct Feedback {
+    
+    private var _simple: String = ""
+    private var _correct: String = ""
+    private var _incorrect: String = ""
+    
+    var simple: String {
+        
+        get {
+            
+            return self._simple
+            
+        }
+        
+        set {
+            
+            self._simple = newValue
+            
+        }
+        
+    }
+    
+    var correct: String {
+        
+        get {
+            
+            return self._correct
+            
+        }
+        
+        set {
+            
+            self._correct = newValue
+            
+        }
+        
+    }
+    
+    var incorrect: String {
+        
+        get {
+            
+            return self._incorrect
+            
+        }
+        
+        set {
+            
+            self._incorrect = newValue
             
         }
         

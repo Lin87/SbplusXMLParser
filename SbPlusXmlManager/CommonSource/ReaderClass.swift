@@ -23,6 +23,9 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     private var _tempPage: Page = Page()
     private var _tempSegment: Segment = Segment()
     private var _tempFrame: String = ""
+    private var _tempQuizItem: QuizItem = QuizItem( type: "" )
+    private var _tempAnswerArray: Array<[String: String]> = []
+    private var _tempAnswer: [String: String] = [:]
     
     init( path: String ) {
         
@@ -160,6 +163,89 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
         }
         
+        if ( elementName == "shortAnswer" ) {
+            
+            self._tempQuizItem = ShortAnswer()
+            
+        }
+        
+        if ( elementName == "fillInTheBlank" ) {
+            
+            self._tempQuizItem = FillInTheBlank()
+            
+        }
+        
+        if ( elementName == "multipleChoiceSingle" ) {
+            
+            self._tempQuizItem = MultipleChoiceSingle()
+            
+        }
+        
+        if ( elementName == "multipleChoiceMultiple" ) {
+            
+            self._tempQuizItem = MultipleChoiceMultiple()
+            
+        }
+        
+        if ( elementName == "question" ) {
+            
+            var image: String? = attributeDict["image"]
+            var audio: String? = attributeDict["audio"]
+            
+            if ( image == nil ) {
+                
+                image = ""
+                
+            }
+            
+            if ( audio == nil ) {
+                
+                audio = ""
+                
+            }
+            
+            self._tempQuizItem.question = [ "image": image!, "audio": audio! ]
+            
+        }
+        
+        if ( elementName == "choices" ) {
+            
+            let random: String? = attributeDict["random"]
+            
+            if ( random != nil && random! == "yes" ) {
+                
+                self._tempQuizItem.random = true
+                
+            }
+            
+        }
+        
+        if ( elementName == "answer" ) {
+            
+            if ( self._tempQuizItem.type == "multipleChoiceSingle" || self._tempQuizItem.type == "multipleChoiceMultiple" ) {
+                
+                var image: String? = attributeDict["image"]
+                var audio: String? = attributeDict["audio"]
+                var correct: String? = attributeDict["correct"]
+                
+                if ( image == nil ) {
+                    image = ""
+                }
+                
+                if ( audio == nil ) {
+                    audio = ""
+                }
+                
+                if ( correct == nil ) {
+                    correct = ""
+                }
+                
+                self._tempAnswer = ["image": image!, "audio": audio!, "correct": correct!]
+                
+            }
+            
+        }
+        
     }
     
     func parser( _: XMLParser, foundCharacters string: String) {
@@ -236,6 +322,98 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             self._tempFrame = ""
             
         }
+        
+        if ( elementName == "shortAnswer" || elementName == "multipleChoiceSingle" || elementName == "multipleChoiceMultiple") {
+            
+            self._tempPage.quiz = self._tempQuizItem
+            self._tempQuizItem = QuizItem( type: "" )
+            
+        }
+        
+        if ( elementName == "fillInTheBlank" ) {
+            
+            self._tempPage.quiz = self._tempQuizItem
+            self._tempQuizItem = QuizItem( type: "" )
+            
+        }
+        
+        if ( elementName == "question" ) {
+            
+            self._tempQuizItem.question[ "text" ] = self.foundCharacters
+            
+        }
+        
+        if ( elementName == "choices" ) {
+            
+            self._tempQuizItem.choices = self._tempAnswerArray
+            self._tempAnswerArray = []
+            
+        }
+        
+        if ( elementName == "answer" ) {
+            
+            if ( self._tempQuizItem.type == "fillInTheBlank" ) {
+                
+                self._tempQuizItem.answer = self.foundCharacters
+                
+            }
+            
+            if ( self._tempQuizItem.type == "multipleChoiceSingle" || self._tempQuizItem.type == "multipleChoiceMultiple" ) {
+                
+                self._tempAnswerArray.append( self._tempAnswer );
+                self._tempAnswer = [:]
+                
+            }
+            
+        }
+        
+        if ( elementName == "value" ) {
+            
+            if ( self._tempQuizItem.type == "multipleChoiceSingle" || self._tempQuizItem.type == "multipleChoiceMultiple" ) {
+                
+                self._tempAnswer["value"] = self.foundCharacters
+                
+            }
+            
+        }
+        
+        if ( elementName == "feedback" ) {
+            
+            if ( self._tempQuizItem.type == "shortAnswer" ) {
+                
+                self._tempQuizItem.feedback.simple = self.foundCharacters
+                
+            }
+            
+            if ( self._tempQuizItem.type == "multipleChoiceSingle" ) {
+                
+                self._tempAnswer["feedback"] = self.foundCharacters
+                
+            }
+            
+        }
+        
+        if ( elementName == "correctFeedback" ) {
+            
+            if ( self._tempQuizItem.type == "fillInTheBlank" || self._tempQuizItem.type == "multipleChoiceMultiple" ) {
+                
+                self._tempQuizItem.feedback.correct = self.foundCharacters
+                
+            }
+            
+        }
+        
+        if ( elementName == "incorrectFeedback" ) {
+            
+            if ( self._tempQuizItem.type == "fillInTheBlank" || self._tempQuizItem.type == "multipleChoiceMultiple" ) {
+                
+                self._tempQuizItem.feedback.incorrect = self.foundCharacters
+                
+            }
+            
+        }
+        
+        
         
         self.foundCharacters = ""
         
