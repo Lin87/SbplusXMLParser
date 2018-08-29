@@ -77,7 +77,21 @@ public class StorybookXml {
      */
     public func toString() -> String {
         
-        return self.accent + " | " + self.pageImgFormat + " | " + self.splashImgFormat + " | " + self.analytics.description + " | " + self.mathJax.description + " | " +  self.version + " | " + self.setup.program + " | " + self.setup.course + " | " + self.setup.title + " | " + self.setup.subtitle + " | " + self.setup.length + " | " + self.setup.authorName + " >> " + self.setup.authorProfile + " | " + self.setup.generalInfo + "\n" + self.getSectionString()
+        let string = """
+                     <?xml version="1.0" encoding="UTF-8" ?>
+                     <storybook accent="\(self.accent)" pageImgFormat="\(self.pageImgFormat)" splashImgFormat="\(self.splashImgFormat)" analytics="\(self.analytics.description)" mathjax="\(self.mathJax.description)" xmlVersion="\(self.version)">
+                         <setup program="\(self.setup.program)" course="\(self.setup.course)">
+                             <title>\(self.setup.title)</title>
+                             <subtitle>\(self.setup.subtitle)</subtitle>
+                             <length>\(self.setup.length)</length>
+                             <author name="\(self.setup.authorName)"><![CDATA[\(self.setup.authorProfile)]]></author>
+                             <generalInfo><![CDATA[\(self.setup.generalInfo)]]></generalInfo>
+                         </setup>
+                         \(self.getSectionString())
+                     </storybook>
+                     """
+        
+        return string
         
     }
     
@@ -95,42 +109,71 @@ public class StorybookXml {
         for section in self.sections {
             
             count += 1
-            sectionString += "Section \( count ): " + section.title + "\n"
+            sectionString += "<section title=\"\(section.title)>\""
             
             /// loop through pages within a section
             for page in section.pages {
                 
-                sectionString += page.type + " | " + page.src + " | " + page.title + " | " + page.transition  + " | Embed >> " + String( page.embed ) + " | " + page.notes  + " | "
+                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
                 
                 /// loop through segments within a page
-                for segment in page.widget {
+                if ( page.widget.count > 0 ) {
                     
-                    sectionString += segment.name + " >> " + segment.content + " | "
+                    sectionString += "<widget>"
+                    
+                    for segment in page.widget {
+                        
+                        sectionString += "<segment name=\"\(segment.name)\"><![CDATA[\(segment.content)]]></segment>"
+                        
+                    }
+                    
+                    sectionString += "</widget>"
                     
                 }
                 
                 /// loop through frames within a page
-                for frame in page.frames {
+                
+                if ( page.frames.count > 0 ) {
                     
-                    sectionString += frame + " | "
+                    for frame in page.frames {
+                        
+                        sectionString += "<frame start=\"\(frame)\" />"
+                        
+                    }
                     
                 }
                 
                 // get quiz item if quiz type
                 if ( page.type == "quiz" ) {
                     
-                    sectionString += "Quiz >> " + page.quiz.generateXML() + " | "
+                    sectionString += page.quiz.generateXML()
+                    
+                } else {
+                    
+                    if ( page.notes.isEmpty ) {
+                        
+                        sectionString += "<note />"
+                        
+                    } else {
+                        
+                        sectionString += "<note>\(page.notes)</note>"
+                        
+                    }
                     
                 }
                 
                 // get audio if it is html
                 if( page.type == "html" && !page.audio.isEmpty ) {
-                    sectionString += "htmlAudio >> " + page.audio
+                    
+                    sectionString += "<audio src=\"\(page.audio)\" />"
+                    
                 }
                 
-                sectionString += "\n\n"
+                sectionString += "</page>"
                 
             }
+            
+            sectionString += "</section>"
             
         }
         
@@ -694,7 +737,9 @@ public class ShortAnswer: QuizItem {
     }
     
     override public func generateXML() -> String {
-        return self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Feedback >> " + self.feedback.simple
+        
+        return "<shortAnswer><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><feedback><![CDATA[\(self.feedback.simple)]]></feedback></shortAnswer>"
+        
     }
     
 }
@@ -709,7 +754,8 @@ public class FillInTheBlank: QuizItem {
     
     override public func generateXML() -> String {
         
-        return self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Answer >> " + self.answer + " | C Feedback >> " + self.feedback.correct + " | I Feedback >> " + self.feedback.incorrect
+        return "<fillInTheBlank><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><answer>\(self.answer)</answer><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><![CDATA[\(self.feedback.incorrect)]]><incorrectFeedback></incorrectFeedback></fillInTheBlank>"
+        
     }
     
 }
@@ -724,17 +770,15 @@ public class MultipleChoiceSingle: QuizItem {
     
     override public func generateXML() -> String {
         
-        var xml:String = self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Random >> " + String( self.random ) + " | Choices >> "
+        var xml = "<multipleChoiceSingle><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><choices random=\"\(self.random)\">"
         
         for answer in self.choices {
             
-            for ( key, value ) in answer {
-                
-                xml += key + " : " + value + " | "
-                
-            }
+            xml += "<answer image=\"\(answer["image"] ?? "")\" audio=\"\(answer["audio"] ?? "")\" correct=\"\(answer["correct"] ?? "")\"><value>\(answer["value"] ?? "")</value><feedback></feedback><![CDATA[\(answer["feedback"] ?? "")]]></answer>"
             
         }
+        
+        xml += "</choices></multipleChoiceSingle>"
         
         return xml
         
@@ -752,19 +796,15 @@ public class MultipleChoiceMultiple: QuizItem {
     
     override public func generateXML() -> String {
         
-        var xml:String = self.question["text"]! + " | "  + self.question["image"]!  + " | " + self.question["audio"]! + " | Random >> " + String( self.random ) + " | Choices >> "
+        var xml = "<multipleChoiceSingle><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><choices random=\"\(self.random)\">"
         
         for answer in self.choices {
             
-            for ( key, value ) in answer {
-                
-                xml += key + " : " + value + " | "
-                
-            }
+            xml += "<answer image=\"\(answer["image"] ?? "")\" audio=\"\(answer["audio"] ?? "")\" correct=\"\(answer["correct"] ?? "")\"><value>\(answer["value"] ?? "")</value></answer>"
             
         }
         
-        xml += " | C Feedback >> " + self.feedback.correct + " | I Feedback >> " + self.feedback.incorrect
+        xml += "</choices><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><incorrectFeedback><![CDATA[\(self.feedback.incorrect)]]>)</incorrectFeedback></multipleChoiceSingle>"
         
         return xml
         

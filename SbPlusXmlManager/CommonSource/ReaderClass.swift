@@ -436,9 +436,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
         
     }
     
-    func parserDidStartDocument( _: XMLParser ) {
-        //print("started")
-    }
+    func parserDidStartDocument( _: XMLParser ) {}
     
     func parserDidEndDocument( _: XMLParser ) {
         
