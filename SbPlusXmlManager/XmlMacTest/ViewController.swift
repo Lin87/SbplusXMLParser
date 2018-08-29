@@ -32,7 +32,18 @@ class ViewController: NSViewController {
         do {
             try xmlMngr.read( path: "file:///Volumes/Macintosh%20HD/Users/ethan.lin/Desktop/sbplus.xml" );
             xmlMngr.parse();
-            output.string = xmlMngr.getSbXml().toString();
+            
+            let xml = xmlMngr.getSbXml().toString()
+            
+            output.string = xml
+            
+            var home = FileManager.default.homeDirectoryForCurrentUser
+            let filePath = "Desktop/sbplus\(Int(NSDate().timeIntervalSince1970.rounded())).xml"
+            
+            home.appendPathComponent(filePath)
+            
+            try xml.write(to: home.absoluteURL, atomically: true, encoding: .utf8)
+            
         } catch let error as NSError {
             output.string = error.localizedFailureReason!;
         }

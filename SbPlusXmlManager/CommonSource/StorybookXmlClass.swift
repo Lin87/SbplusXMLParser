@@ -774,7 +774,7 @@ public class MultipleChoiceSingle: QuizItem {
         
         for answer in self.choices {
             
-            xml += "<answer image=\"\(answer["image"] ?? "")\" audio=\"\(answer["audio"] ?? "")\" correct=\"\(answer["correct"] ?? "")\"><value>\(answer["value"] ?? "")</value><feedback></feedback><![CDATA[\(answer["feedback"] ?? "")]]></answer>"
+            xml += "<answer image=\"\(answer["image"] ?? "")\" audio=\"\(answer["audio"] ?? "")\" correct=\"\(answer["correct"] ?? "")\"><value>\(answer["value"] ?? "")</value><feedback><![CDATA[\(answer["feedback"] ?? "")]]></feedback></answer>"
             
         }
         
