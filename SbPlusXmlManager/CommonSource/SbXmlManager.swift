@@ -16,17 +16,30 @@ public class SbXmlManager {
     
     public func read( path: String ) throws -> String {
         
+        var result: String = "";
+        
         self.reader = SbXmlReader( path: path )
         try self.reader!.readXml()
         self.reader!.parseXml()
         
-        return self.reader!.getXmlString()
+        #if os( OSX )
+        result = (try XMLDocument( xmlString: self.reader!.getXmlString(), options: XMLNode.Options.documentTidyXML ).xmlString )
+        #elseif ( iOS )
+        result = self.reader!.getXmlString()
+        #endif
+        
+        return result
         
     }
     
     public func write( path: URL, content: String ) throws {
         
-        try content.write( to: path, atomically: true, encoding: .utf8 )
+        #if os( OSX )
+        
+        let xmlString = try XMLDocument( xmlString: content, options: XMLNode.Options.documentTidyXML )
+        try xmlString.xmlString.write( to: path, atomically: true, encoding: .utf8 )
+        
+        #endif
         
     }
     
