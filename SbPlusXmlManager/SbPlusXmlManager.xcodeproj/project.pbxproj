@@ -19,8 +19,6 @@
 		1B677E0020EE707900CE97E8 /* SbPlusXmlManager_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA58A2520EE6FDB004D631F /* SbPlusXmlManager_iOSTests.swift */; };
 		1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
 		1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
-		1B677E1720EE749600CE97E8 /* WriterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0620EE749600CE97E8 /* WriterClass.swift */; };
-		1B677E1820EE749600CE97E8 /* WriterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0620EE749600CE97E8 /* WriterClass.swift */; };
 		1B677E1D20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */; };
 		1B677E1E20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */; };
 		1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */; };
@@ -67,7 +65,6 @@
 		1B1E9FEA20EE7E220048D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B1E9FEC20EE7E220048D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
-		1B677E0620EE749600CE97E8 /* WriterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriterClass.swift; sourceTree = "<group>"; };
 		1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookXmlClass.swift; sourceTree = "<group>"; };
 		1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlManager.swift; sourceTree = "<group>"; };
 		1B93B9BC20EFBBDF00381286 /* XmlMacTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XmlMacTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,7 +198,6 @@
 				1B677E0320EE749600CE97E8 /* ReaderClass.swift */,
 				1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */,
 				1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */,
-				1B677E0620EE749600CE97E8 /* WriterClass.swift */,
 				1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */,
 				1BA58A2320EE6F83004D631F /* Info.plist */,
 			);
@@ -482,7 +478,6 @@
 				1B677E1D20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */,
 				1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */,
 				1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */,
-				1B677E1720EE749600CE97E8 /* WriterClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +496,6 @@
 				1B677E1E20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */,
 				1B677E2420EE749600CE97E8 /* SbXmlManager.swift in Sources */,
 				1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */,
-				1B677E1820EE749600CE97E8 /* WriterClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

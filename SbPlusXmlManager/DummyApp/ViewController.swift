@@ -14,14 +14,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var output: UITextView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-        getXMLPath();
+        self.getXMLPath()
+        
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
+        
     }
     
     func getXMLPath() {
@@ -29,11 +35,13 @@ class ViewController: UIViewController {
         let xmlMngr = SbXmlManager()
         
         do {
-            try xmlMngr.read( path: "file:///Volumes/Macintosh%20HD/Users/ethan.lin/Desktop/sbplus.xml" );
-            xmlMngr.parse();
-            output.text = xmlMngr.getSbXml().toString();
+            
+            output.text = try xmlMngr.read( path: "file:///Volumes/Macintosh%20HD/Users/ethan.lin/Desktop/sbplus.xml" )
+            
         } catch let error as NSError {
-            output.text = error.localizedFailureReason;
+            
+            output.text = error.localizedFailureReason
+            
         }
         
     }

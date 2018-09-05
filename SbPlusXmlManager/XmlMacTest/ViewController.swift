@@ -11,11 +11,13 @@ import SbPlusXmlManager
 
 class ViewController: NSViewController {
     
+    let xmlMngr = SbXmlManager()
+    
     @IBOutlet var output: NSTextView!
     @IBAction func selectFileBtn(_ sender: NSButton) {
         
         let singleFileOpenPanel = NSOpenPanel()
-        
+
         singleFileOpenPanel.allowsMultipleSelection = false
         singleFileOpenPanel.canChooseDirectories = false
         singleFileOpenPanel.canChooseFiles = true
@@ -48,7 +50,7 @@ class ViewController: NSViewController {
                 if result == NSApplication.ModalResponse.OK {
                     
                     guard let saveUrl = saveFileOpenPanel.url else { return }
-                    self.saveFile( fileUrl: saveUrl )
+                    self.saveFile( path: saveUrl, content: self.output.string )
                     
                 }
                 
@@ -63,9 +65,7 @@ class ViewController: NSViewController {
             alert.alertStyle = .informational
             alert.addButton(withTitle: "OK")
             
-            alert.beginSheetModal(for: self.view.window!, completionHandler: { result in
-                // do some fun here otherwise nothing
-            } )
+            alert.beginSheetModal(for: self.view.window!, completionHandler: nil )
             
         }
         
@@ -84,36 +84,31 @@ class ViewController: NSViewController {
     
     private func readFile( fileUrl: URL ) {
         
-        let xmlMngr = SbXmlManager()
-        
         do {
             
-            try xmlMngr.read( path: fileUrl.absoluteString );
-            xmlMngr.parse();
-            
-            let xml = xmlMngr.getSbXml().toString()
-            
-            output.string = xml
+            output.string = try xmlMngr.read( path: fileUrl.absoluteString )
             
         } catch let error as NSError {
             
-            output.string = error.localizedFailureReason!;
+            output.string = error.localizedFailureReason!
             
         }
         
     }
     
-    private func saveFile( fileUrl: URL ) {
+    private func saveFile( path: URL, content: String ) {
         
         do {
             
-            try output.string.write(to: fileUrl, atomically: true, encoding: .utf8)
+            try xmlMngr.write( path: path, content: content )
             
         } catch let error as NSError {
             
-            output.string = error.localizedFailureReason!;
+            output.string = error.localizedFailureReason!
             
         }
+        
+        
         
     }
     

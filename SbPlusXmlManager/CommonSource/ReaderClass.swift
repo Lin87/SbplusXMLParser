@@ -51,7 +51,13 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     
     func getXmlString() -> String {
         
-        return self.xmlString
+        return self.sbXml!.toString()
+        
+    }
+    
+    func getSbXmlObj() -> StorybookXml {
+        
+        return self.sbXml!
         
     }
     
@@ -443,12 +449,6 @@ class SbXmlReader: NSObject, XMLParserDelegate {
         if ( self.sbXml != nil ) {
             self.sbXml!.setSetup( setup: self.sbXmlSetup )
         }
-        
-    }
-    
-    func getSbXml() -> StorybookXml {
-        
-        return self.sbXml!
         
     }
     
