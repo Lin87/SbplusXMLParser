@@ -150,15 +150,7 @@ public class StorybookXml {
                     
                 } else {
                     
-                    if ( page.notes.isEmpty ) {
-                        
-                        sectionString += "<note />"
-                        
-                    } else {
-                        
-                        sectionString += "<note>\(page.notes)</note>"
-                        
-                    }
+                    sectionString += "<note>\(page.notes)</note>"
                     
                 }
                 

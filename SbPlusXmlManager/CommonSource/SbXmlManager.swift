@@ -23,9 +23,14 @@ public class SbXmlManager {
         self.reader!.parseXml()
         
         #if os( OSX )
-        result = (try XMLDocument( xmlString: self.reader!.getXmlString(), options: XMLNode.Options.documentTidyXML ).xmlString )
+        
+        let xml = try XMLDocument( xmlString: self.reader!.xmlString, options: XMLNode.Options.nodePreserveCDATA )
+        result = xml.xmlString(options: .nodePrettyPrint)
+        
         #elseif ( iOS )
+        
         result = self.reader!.getXmlString()
+        
         #endif
         
         return result
@@ -36,8 +41,8 @@ public class SbXmlManager {
         
         #if os( OSX )
         
-        let xmlString = try XMLDocument( xmlString: content, options: XMLNode.Options.documentTidyXML )
-        try xmlString.xmlString.write( to: path, atomically: true, encoding: .utf8 )
+        let xml = try XMLDocument( xmlString: content, options: XMLNode.Options.nodePreserveCDATA )
+        try xml.xmlString(options: [.nodeCompactEmptyElement, .nodePrettyPrint]).write( to: path, atomically: true, encoding: .utf8 )
         
         #endif
         
