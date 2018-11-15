@@ -1,6 +1,6 @@
 /**
- StorybookXmlClass.swift
- SbplusXMLManager
+ StorybookXml.swift
+ SbXmlParser
  
  This file contains public classes and structs that will serve as DTO for Storybook Plus XML data.
  

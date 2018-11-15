@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-               BuildableName = "SbPlusXmlManager.framework"
-               BlueprintName = "SbPlusXmlManager_iOS"
-               ReferencedContainer = "container:SbPlusXmlManager.xcodeproj">
+               BlueprintIdentifier = "1BA58A0920EE6EB8004D631F"
+               BuildableName = "SbXmlParser.framework"
+               BlueprintName = "SbXmlParser_macOS"
+               ReferencedContainer = "container:SbXmlParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1BA589F320EE6E3F004D631F"
-               BuildableName = "SbPlusXmlManager_iOSTests.xctest"
-               BlueprintName = "SbPlusXmlManager_iOSTests"
-               ReferencedContainer = "container:SbPlusXmlManager.xcodeproj">
+               BlueprintIdentifier = "1BA58A1120EE6EB9004D631F"
+               BuildableName = "SbplusXmlManager_macOSTests.xctest"
+               BlueprintName = "SbplusXmlManager_macOSTests"
+               ReferencedContainer = "container:SbXmlParser.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-            BuildableName = "SbPlusXmlManager.framework"
-            BlueprintName = "SbPlusXmlManager_iOS"
-            ReferencedContainer = "container:SbPlusXmlManager.xcodeproj">
+            BlueprintIdentifier = "1BA58A0920EE6EB8004D631F"
+            BuildableName = "SbXmlParser.framework"
+            BlueprintName = "SbXmlParser_macOS"
+            ReferencedContainer = "container:SbXmlParser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-            BuildableName = "SbPlusXmlManager.framework"
-            BlueprintName = "SbPlusXmlManager_iOS"
-            ReferencedContainer = "container:SbPlusXmlManager.xcodeproj">
+            BlueprintIdentifier = "1BA58A0920EE6EB8004D631F"
+            BuildableName = "SbXmlParser.framework"
+            BlueprintName = "SbXmlParser_macOS"
+            ReferencedContainer = "container:SbXmlParser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-            BuildableName = "SbPlusXmlManager.framework"
-            BlueprintName = "SbPlusXmlManager_iOS"
-            ReferencedContainer = "container:SbPlusXmlManager.xcodeproj">
+            BlueprintIdentifier = "1BA58A0920EE6EB8004D631F"
+            BuildableName = "SbXmlParser.framework"
+            BlueprintName = "SbXmlParser_macOS"
+            ReferencedContainer = "container:SbXmlParser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

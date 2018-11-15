@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B677DFD20EE706400CE97E8 /* SbPlusXmlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B677DFE20EE706700CE97E8 /* SbPlusXmlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B677DFD20EE706400CE97E8 /* SbXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbXmlParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B677DFE20EE706700CE97E8 /* SbXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbXmlParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
 		1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
-		1B677E1D20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */; };
-		1B677E1E20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */; };
-		1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */; };
-		1B677E2420EE749600CE97E8 /* SbXmlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */; };
+		1B677E1D20EE749600CE97E8 /* StorybookXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXml.swift */; };
+		1B677E1E20EE749600CE97E8 /* StorybookXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXml.swift */; };
+		1B677E2320EE749600CE97E8 /* SbXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */; };
+		1B677E2420EE749600CE97E8 /* SbXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
-		1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookXmlClass.swift; sourceTree = "<group>"; };
-		1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlManager.swift; sourceTree = "<group>"; };
-		1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbPlusXmlManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbPlusXmlManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbPlusXmlManager.h; sourceTree = "<group>"; };
+		1B677E0920EE749600CE97E8 /* StorybookXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookXml.swift; sourceTree = "<group>"; };
+		1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlParser.swift; sourceTree = "<group>"; };
+		1BA589EB20EE6E3F004D631F /* SbXmlParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbXmlParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA58A0A20EE6EB8004D631F /* SbXmlParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbXmlParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA58A2220EE6F83004D631F /* SbXmlParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbXmlParser.h; sourceTree = "<group>"; };
 		1BA58A2320EE6F83004D631F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,8 +64,8 @@
 		1BA589EC20EE6E3F004D631F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */,
-				1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */,
+				1BA589EB20EE6E3F004D631F /* SbXmlParser.framework */,
+				1BA58A0A20EE6EB8004D631F /* SbXmlParser.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,9 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				1B677E0320EE749600CE97E8 /* ReaderClass.swift */,
-				1B677E0C20EE749600CE97E8 /* SbXmlManager.swift */,
-				1B677E0920EE749600CE97E8 /* StorybookXmlClass.swift */,
-				1BA58A2220EE6F83004D631F /* SbPlusXmlManager.h */,
+				1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */,
+				1B677E0920EE749600CE97E8 /* StorybookXml.swift */,
+				1BA58A2220EE6F83004D631F /* SbXmlParser.h */,
 				1BA58A2320EE6F83004D631F /* Info.plist */,
 			);
 			path = CommonSource;
@@ -89,7 +89,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B677DFD20EE706400CE97E8 /* SbPlusXmlManager.h in Headers */,
+				1B677DFD20EE706400CE97E8 /* SbXmlParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,16 +97,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B677DFE20EE706700CE97E8 /* SbPlusXmlManager.h in Headers */,
+				1B677DFE20EE706700CE97E8 /* SbXmlParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1BA589EA20EE6E3F004D631F /* SbPlusXmlManager_iOS */ = {
+		1BA589EA20EE6E3F004D631F /* SbXmlParser_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BA589FF20EE6E3F004D631F /* Build configuration list for PBXNativeTarget "SbPlusXmlManager_iOS" */;
+			buildConfigurationList = 1BA589FF20EE6E3F004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_iOS" */;
 			buildPhases = (
 				1BA589E620EE6E3F004D631F /* Sources */,
 				1BA589E720EE6E3F004D631F /* Frameworks */,
@@ -117,14 +117,14 @@
 			);
 			dependencies = (
 			);
-			name = SbPlusXmlManager_iOS;
+			name = SbXmlParser_iOS;
 			productName = SbPlusXmlManager_iOS;
-			productReference = 1BA589EB20EE6E3F004D631F /* SbPlusXmlManager.framework */;
+			productReference = 1BA589EB20EE6E3F004D631F /* SbXmlParser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1BA58A0920EE6EB8004D631F /* SbplusXmlManager_macOS */ = {
+		1BA58A0920EE6EB8004D631F /* SbXmlParser_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BA58A1B20EE6EB9004D631F /* Build configuration list for PBXNativeTarget "SbplusXmlManager_macOS" */;
+			buildConfigurationList = 1BA58A1B20EE6EB9004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_macOS" */;
 			buildPhases = (
 				1BA58A0520EE6EB8004D631F /* Sources */,
 				1BA58A0620EE6EB8004D631F /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = SbplusXmlManager_macOS;
+			name = SbXmlParser_macOS;
 			productName = SbplusXmlManager_macOS;
-			productReference = 1BA58A0A20EE6EB8004D631F /* SbPlusXmlManager.framework */;
+			productReference = 1BA58A0A20EE6EB8004D631F /* SbXmlParser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1BA589E520EE6E3F004D631F /* Build configuration list for PBXProject "SbPlusXmlManager" */;
+			buildConfigurationList = 1BA589E520EE6E3F004D631F /* Build configuration list for PBXProject "SbXmlParser" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,8 +173,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BA589EA20EE6E3F004D631F /* SbPlusXmlManager_iOS */,
-				1BA58A0920EE6EB8004D631F /* SbplusXmlManager_macOS */,
+				1BA589EA20EE6E3F004D631F /* SbXmlParser_iOS */,
+				1BA58A0920EE6EB8004D631F /* SbXmlParser_macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -201,8 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B677E1D20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */,
-				1B677E2320EE749600CE97E8 /* SbXmlManager.swift in Sources */,
+				1B677E1D20EE749600CE97E8 /* StorybookXml.swift in Sources */,
+				1B677E2320EE749600CE97E8 /* SbXmlParser.swift in Sources */,
 				1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,8 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B677E1E20EE749600CE97E8 /* StorybookXmlClass.swift in Sources */,
-				1B677E2420EE749600CE97E8 /* SbXmlManager.swift in Sources */,
+				1B677E1E20EE749600CE97E8 /* StorybookXml.swift in Sources */,
+				1B677E2420EE749600CE97E8 /* SbXmlParser.swift in Sources */,
 				1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,8 +361,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbPlusXmlManager-iOS";
-				PRODUCT_NAME = SbPlusXmlManager;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbXmlParser-iOS";
+				PRODUCT_NAME = SbXmlParser;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -389,8 +389,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbPlusXmlManager-iOS";
-				PRODUCT_NAME = SbPlusXmlManager;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbXmlParser-iOS";
+				PRODUCT_NAME = SbXmlParser;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,8 +418,8 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbplusXmlManager-macOS";
-				PRODUCT_NAME = SbPlusXmlManager;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbXmlParser-macOS";
+				PRODUCT_NAME = SbXmlParser;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -448,8 +448,8 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbplusXmlManager-macOS";
-				PRODUCT_NAME = SbPlusXmlManager;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbXmlParser-macOS";
+				PRODUCT_NAME = SbXmlParser;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -459,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BA589E520EE6E3F004D631F /* Build configuration list for PBXProject "SbPlusXmlManager" */ = {
+		1BA589E520EE6E3F004D631F /* Build configuration list for PBXProject "SbXmlParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA589FD20EE6E3F004D631F /* Debug */,
@@ -468,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BA589FF20EE6E3F004D631F /* Build configuration list for PBXNativeTarget "SbPlusXmlManager_iOS" */ = {
+		1BA589FF20EE6E3F004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA58A0020EE6E3F004D631F /* Debug */,
@@ -477,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BA58A1B20EE6EB9004D631F /* Build configuration list for PBXNativeTarget "SbplusXmlManager_macOS" */ = {
+		1BA58A1B20EE6EB9004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA58A1C20EE6EB9004D631F /* Debug */,
