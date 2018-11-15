@@ -95,6 +95,19 @@ public class StorybookXml {
         
     }
     
+    #if os( OSX )
+    /**
+     Output the Storybook XML instance as a XML Document.
+     
+     - Returns: An XML Document object.
+     */
+    public func toXMLDoc() throws -> XMLDocument {
+        
+        return try XMLDocument(xmlString: self.toString(), options: [.nodePreserveCDATA])
+        
+    }
+    #endif
+    
     /**
      Obtain data in the sections array as a string.
      

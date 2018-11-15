@@ -12,7 +12,7 @@ import Foundation
 
 class SbXmlReader: NSObject, XMLParserDelegate {
     
-    var xmlPath: String = ""
+    var xmlPath: URL?
     var xmlString: String = ""
     var sbXml: StorybookXml?
     var sbXmlSetup: Setup = Setup()
@@ -27,16 +27,16 @@ class SbXmlReader: NSObject, XMLParserDelegate {
     private var _tempAnswerArray: Array<[String: String]> = []
     private var _tempAnswer: [String: String] = [:]
     
-    init( path: String ) {
-        
+    convenience init(path: URL) throws {
+        self.init()
         self.xmlPath = path
+        self.xmlString = try String( contentsOf: self.xmlPath! )
         
     }
     
-    func readXml() throws {
-        
-        self.xmlString = try String( contentsOf: NSURL( string: self.xmlPath )! as URL )
-        
+    convenience init(xml: String) {
+        self.init()
+        self.xmlString = xml
     }
     
     func parseXml() {
@@ -435,8 +435,6 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             }
             
         }
-        
-        
         
         self.foundCharacters = ""
         
