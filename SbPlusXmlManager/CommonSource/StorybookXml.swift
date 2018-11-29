@@ -222,6 +222,8 @@ public struct Setup {
     private var _authorProfile:String = ""
     private var _generalInfo:String = ""
     
+    public init() {}
+    
     var program: String {
         
         get {
@@ -357,6 +359,8 @@ public struct Section {
     private var _title: String = ""
     private var _pages: Array<Page> = []
     
+    public init() {}
+    
     var title: String {
         
         get {
@@ -404,6 +408,8 @@ public class Page {
     private var _frames: Array<String> = []
     private var _quiz: QuizItem = QuizItem( type: "" )
     private var _audio: String = ""
+    
+    public init() {}
     
     var type: String {
         
@@ -553,9 +559,6 @@ public class Page {
         
     }
     
-    // an empty init for flexibility
-    public init() {}
-    
     /**
      Add a segment to the segments array of a page instance.
      
@@ -585,6 +588,8 @@ public struct Segment {
     
     private var _name: String = ""
     private var _content: String = ""
+    
+    public init() {}
     
     var name: String {
         
@@ -822,6 +827,8 @@ public struct Feedback {
     private var _simple: String = ""
     private var _correct: String = ""
     private var _incorrect: String = ""
+    
+    public init() {}
     
     var simple: String {
         

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-               BuildableName = "SbPlusXmlParser.framework"
+               BuildableName = "SbXmlParser.framework"
                BlueprintName = "SbXmlParser_iOS"
                ReferencedContainer = "container:SbXmlParser.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-            BuildableName = "SbPlusXmlParser.framework"
+            BuildableName = "SbXmlParser.framework"
             BlueprintName = "SbXmlParser_iOS"
             ReferencedContainer = "container:SbXmlParser.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-            BuildableName = "SbPlusXmlParser.framework"
+            BuildableName = "SbXmlParser.framework"
             BlueprintName = "SbXmlParser_iOS"
             ReferencedContainer = "container:SbXmlParser.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BA589EA20EE6E3F004D631F"
-            BuildableName = "SbPlusXmlParser.framework"
+            BuildableName = "SbXmlParser.framework"
             BlueprintName = "SbXmlParser_iOS"
             ReferencedContainer = "container:SbXmlParser.xcodeproj">
          </BuildableReference>
