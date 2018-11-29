@@ -125,7 +125,7 @@ public class StorybookXml {
             sectionString += "<section title=\"\(section.title)>\""
             
             /// loop through pages within a section
-            for page in section.pages {
+            for page in section.pages! {
                 
                 sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
                 
@@ -213,185 +213,26 @@ public class StorybookXml {
 // A setup element in a Storybook Plus XML
 public struct Setup {
     
-    private var _program: String = ""
-    private var _course:String = ""
-    private var _title:String = ""
-    private var _subtitle:String = ""
-    private var _length: String = ""
-    private var _authorName:String = ""
-    private var _authorProfile:String = ""
-    private var _generalInfo:String = ""
+    public var program: String = ""
+    public var course: String = ""
+    public var title: String = ""
+    public var subtitle: String = ""
+    public var length: String = ""
+    public var authorName: String = ""
+    public var authorProfile: String = ""
+    public var generalInfo: String = ""
     
     public init() {}
-    
-    var program: String {
-        
-        get {
-            
-            return self._program
-            
-        }
-        
-        set {
-            
-            self._program = newValue
-            
-        }
-        
-    }
-    
-    var course: String {
-        
-        get {
-            
-            return self._course
-            
-        }
-        
-        set {
-            
-            self._course = newValue
-            
-        }
-        
-    }
-    var title: String {
-        
-        get {
-            
-            return self._title
-            
-        }
-        
-        set {
-            
-            self._title = newValue
-            
-        }
-        
-    }
-    
-    var subtitle: String {
-        
-        get {
-            
-            return self._subtitle
-            
-        }
-        
-        set {
-            
-            self._subtitle = newValue
-            
-        }
-        
-    }
-    
-    var length: String {
-        
-        get {
-            
-            return self._length
-            
-        }
-        
-        set {
-            
-            self._length = newValue
-            
-        }
-        
-    }
-    
-    var authorName: String {
-        
-        get {
-            
-            return self._authorName
-            
-        }
-        
-        set {
-            
-            self._authorName = newValue
-            
-        }
-        
-    }
-    
-    var authorProfile: String {
-        
-        get {
-            
-            return self._authorProfile
-            
-        }
-        
-        set {
-            
-            self._authorProfile = newValue
-            
-        }
-        
-    }
-    
-    var generalInfo: String {
-        
-        get {
-            
-            return self._generalInfo
-            
-        }
-        
-        set {
-            
-            self._generalInfo = newValue
-            
-        }
-        
-    }
     
 }
 
 /// A section element in a Storybook Plus XML
 public struct Section {
     
-    private var _title: String = ""
-    private var _pages: Array<Page> = []
+    public var title: String = ""
+    public var pages: Array<Page>?
     
     public init() {}
-    
-    var title: String {
-        
-        get {
-            
-            return self._title
-            
-        }
-        
-        set {
-            
-            self._title = newValue
-            
-        }
-        
-    }
-    
-    var pages: Array<Page> {
-        
-        get {
-            
-            return self._pages
-            
-        }
-        
-        set {
-            
-            self._pages = newValue
-            
-        }
-        
-    }
     
 }
 
@@ -411,7 +252,7 @@ public class Page {
     
     public init() {}
     
-    var type: String {
+    public var type: String {
         
         get {
             
@@ -427,7 +268,7 @@ public class Page {
         
     }
     
-    var src: String {
+    public var src: String {
         
         get {
             
@@ -443,7 +284,7 @@ public class Page {
         
     }
     
-    var title: String {
+    public var title: String {
         
         get {
             
@@ -459,7 +300,7 @@ public class Page {
         
     }
     
-    var transition: String {
+    public var transition: String {
         
         get {
             
@@ -475,7 +316,7 @@ public class Page {
         
     }
     
-    var embed: Bool {
+    public var embed: Bool {
         
         get {
             
@@ -491,7 +332,7 @@ public class Page {
         
     }
     
-    var notes: String {
+    public var notes: String {
         
         get {
             
@@ -507,7 +348,7 @@ public class Page {
         
     }
     
-    var widget: Array<Segment> {
+    public var widget: Array<Segment> {
         
         get {
             
@@ -517,7 +358,7 @@ public class Page {
         
     }
     
-    var frames: Array<String> {
+    public var frames: Array<String> {
         
         get {
             
@@ -527,7 +368,7 @@ public class Page {
         
     }
     
-    var quiz: QuizItem {
+    public var quiz: QuizItem {
         
         get {
             
@@ -543,7 +384,7 @@ public class Page {
         
     }
     
-    var audio: String {
+    public var audio: String {
         
         get {
             
@@ -586,42 +427,10 @@ public class Page {
 // A segment of a widget in a page element of a Storybook Plus XML
 public struct Segment {
     
-    private var _name: String = ""
-    private var _content: String = ""
+    public var name: String = ""
+    public var content: String = ""
     
     public init() {}
-    
-    var name: String {
-        
-        get {
-            
-            return self._name
-            
-        }
-        
-        set {
-            
-            self._name = newValue
-            
-        }
-        
-    }
-    
-    var content: String {
-        
-        get {
-            
-            return self._content
-            
-        }
-        
-        set {
-            
-            self._content = newValue
-            
-        }
-        
-    }
     
 }
 
@@ -636,7 +445,7 @@ public class QuizItem {
     private var _random: Bool = false
     private var _answer: String = ""
     
-    var question: [String: String] {
+    public var question: [String: String] {
         
         get {
             
@@ -652,7 +461,7 @@ public class QuizItem {
         
     }
     
-    var type: String {
+    public var type: String {
         
         get {
             
@@ -662,7 +471,7 @@ public class QuizItem {
         
     }
     
-    var feedback: Feedback {
+    public var feedback: Feedback {
         
         get {
             
@@ -678,7 +487,7 @@ public class QuizItem {
         
     }
     
-    var choices: Array<[String: String]> {
+    public var choices: Array<[String: String]> {
         
         get {
             
@@ -694,7 +503,7 @@ public class QuizItem {
         
     }
     
-    var random: Bool {
+    public var random: Bool {
         
         get {
             
@@ -710,7 +519,7 @@ public class QuizItem {
         
     }
     
-    var answer: String {
+    public var answer: String {
         
         get {
             
@@ -732,7 +541,7 @@ public class QuizItem {
         
     }
     
-    func generateXML() -> String {
+    public func generateXML() -> String {
         return ""
     }
     
@@ -824,58 +633,10 @@ public class MultipleChoiceMultiple: QuizItem {
 
 public struct Feedback {
     
-    private var _simple: String = ""
-    private var _correct: String = ""
-    private var _incorrect: String = ""
+    public var simple: String = ""
+    public var correct: String = ""
+    public var incorrect: String = ""
     
     public init() {}
-    
-    var simple: String {
-        
-        get {
-            
-            return self._simple
-            
-        }
-        
-        set {
-            
-            self._simple = newValue
-            
-        }
-        
-    }
-    
-    var correct: String {
-        
-        get {
-            
-            return self._correct
-            
-        }
-        
-        set {
-            
-            self._correct = newValue
-            
-        }
-        
-    }
-    
-    var incorrect: String {
-        
-        get {
-            
-            return self._incorrect
-            
-        }
-        
-        set {
-            
-            self._incorrect = newValue
-            
-        }
-        
-    }
     
 }
