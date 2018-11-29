@@ -122,7 +122,7 @@ public class StorybookXml {
         for section in self.sections {
             
             count += 1
-            sectionString += "<section title=\"\(section.title)>\""
+            sectionString += "<section title=\"\(section.title)\">"
             
             /// loop through pages within a section
             for page in section.pages! {
