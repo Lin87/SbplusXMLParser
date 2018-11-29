@@ -14,14 +14,14 @@ import Foundation
 public class StorybookXml {
     
     /// Variables to represent every elements in the XML
-    var accent: String
-    var pageImgFormat: String
-    var splashImgFormat: String
-    var analytics: Bool
-    var mathJax: Bool
-    var version: String
-    var setup: Setup
-    var sections: Array<Section>
+    public var accent: String
+    public var pageImgFormat: String
+    public var splashImgFormat: String
+    public var analytics: Bool
+    public var mathJax: Bool
+    public var version: String
+    public var setup: Setup
+    public var sections: Array<Section>
     
     /**
      Initializes a new Storybook XML instance with full specification.
@@ -79,7 +79,7 @@ public class StorybookXml {
         
         let string = """
                      <?xml version="1.0" encoding="UTF-8" ?>
-                     <storybook accent="\(self.accent)" pageImgFormat="\(self.pageImgFormat)" splashImgFormat="\(self.splashImgFormat)" analytics="\(self.analytics.description)" mathjax="\(self.mathJax.description)" xmlVersion="\(self.version)">
+        <storybook accent="#\(self.accent)" pageImgFormat="\(self.pageImgFormat)" splashImgFormat="\(self.splashImgFormat)" analytics="\(self.analytics.description)" mathjax="\(self.mathJax.description)" xmlVersion="\(self.version)">
                          <setup program="\(self.setup.program)" course="\(self.setup.course)">
                              <title>\(self.setup.title)</title>
                              <subtitle>\(self.setup.subtitle)</subtitle>
