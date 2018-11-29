@@ -10,6 +10,8 @@ import Foundation
 
 public class SbXmlParser {
     
+    public init() {}
+    
     public func read( path: URL ) throws -> StorybookXml {
         
         let reader: SbXmlReader = try SbXmlReader(path: path)
