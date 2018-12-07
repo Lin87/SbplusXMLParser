@@ -184,9 +184,9 @@ public class StorybookXml {
     }
     
     /**
-     Reutun all sections and pages as pages
+     Add a section to the sections array of the Storybook XML instance
      
-     - Returns: An array of pages
+     - Parameter section: The section struct to be added.
      */
     public func addSection( section: Section ) {
         
@@ -194,6 +194,11 @@ public class StorybookXml {
         
     }
     
+    /**
+     Return sections as pages along with other regular pages under the sections
+     
+     - Returns: An array of pages.
+     */
     public func getSectionAsPages() -> Array<Page> {
         
         var pages: Array<Page> = [Page]()
@@ -213,17 +218,6 @@ public class StorybookXml {
         }
         
         return pages
-        
-    }
-    
-    /**
-     Return total number of pages including sections
-     
-     - Returns: An integer.
-     */
-    public func getTotalPagesIncludingSections() -> Int {
-        
-        return getSectionAsPages().count
         
     }
     
