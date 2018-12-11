@@ -66,7 +66,12 @@ class SbXmlReader: NSObject, XMLParserDelegate {
         // get attributes from the storybook element
         if ( elementName == "storybook" ) {
             
-            let accent: String? = attributeDict["accent"]
+            var accent: String? = attributeDict["accent"]
+            
+            if (accent!.hasPrefix("#")) {
+                accent = String(accent!.dropFirst())
+            }
+            
             let imgFormat: String? = attributeDict["pageImgFormat"]
             let splashFormat: String? = attributeDict["splashImgFormat"]
             var analytics: Bool = false
