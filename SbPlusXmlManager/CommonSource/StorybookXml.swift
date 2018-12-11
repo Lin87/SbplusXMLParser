@@ -221,6 +221,17 @@ public class StorybookXml {
         
     }
     
+    /**
+     Return total number of sections
+     
+     - Returns: Number of sections.
+     */
+    public func getNumSections() -> Int {
+        
+        return sections.count
+        
+    }
+    
 }
 
 // A setup element in a Storybook Plus XML
