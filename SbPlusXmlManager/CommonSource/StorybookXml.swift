@@ -77,7 +77,7 @@ public class StorybookXml {
      */
     public func toString() -> String {
         
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><storybook accent=\"#\(self.accent)\" pageImgFormat=\"\(self.pageImgFormat)\" splashImgFormat=\"\(self.splashImgFormat)\" analytics=\"\(self.analytics.description)\" mathjax=\"\(self.mathJax.description)\" xmlVersion=\"\(self.version)\"><setup program=\"\(self.setup.program)\" course=\"\(self.setup.course)\"><title>\(self.setup.title)</title><subtitle>\(self.setup.subtitle)</subtitle><length>\(self.setup.length)</length><author name=\"\(self.setup.authorName)\"><![CDATA[\(self.setup.authorProfile)]]></author><generalInfo><![CDATA[\(self.setup.generalInfo)]]></generalInfo></setup>\(self.getSectionString())</storybook>"
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><storybook accent=\"#\(self.accent)\" pageImgFormat=\"\(self.pageImgFormat)\" splashImgFormat=\"\(self.splashImgFormat)\" analytics=\"\(self.analytics.description)\" mathjax=\"\(self.mathJax.description)\" xmlVersion=\"\(self.version)\"><setup program=\"\(self.setup.program)\" course=\"\(self.setup.course)\"><title>\(self.setup.title)</title><subtitle>\(self.setup.subtitle)</subtitle><length>\(self.setup.length)</length><author name=\"\(self.setup.authorName)\"><![CDATA[\(self.setup.authorProfile)]]></author><generalInfo><![CDATA[\(self.setup.generalInfo)]]></generalInfo></setup>\(self.getSectionString())</storybook>".replacingOccurrences(of: "&", with: "&amp;")
         
     }
     
