@@ -246,7 +246,7 @@ public struct Setup {
     public var authorProfile: String = ""
     public var generalInfo: String = ""
     public var releaseYear: String = ""
-    public var overideProfile: Bool = false
+    public var overrideProfile: Bool = false
     
     public init() {}
     
