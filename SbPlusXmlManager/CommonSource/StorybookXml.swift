@@ -202,16 +202,24 @@ public class StorybookXml {
     public func getSectionAsPages() -> Array<Page> {
         
         var pages: Array<Page> = [Page]()
+        var sectionCount : Int = 0
+        var pageCount : Int = 0
         
         for section in self.sections {
             
             let page: Page = Page()
+            
             page.type = "section"
             page.title = section.title
+            
+            sectionCount += 1
+            page.num = sectionCount
             
             pages.append(page)
             
             for innerPage in section.pages! {
+                pageCount += 1
+                innerPage.num = pageCount
                 pages.append(innerPage)
             }
             
@@ -265,166 +273,19 @@ public struct Section {
 // a page element in a Storybook XML
 public class Page {
     
-    private var _type: String = ""
-    private var _src: String = ""
-    private var _title: String = ""
-    private var _transition: String = ""
-    private var _embed: Bool = false
-    private var _notes: String = ""
-    private var _widget: Array<Segment> = []
-    private var _frames: Array<String> = []
-    private var _quiz: QuizItem = QuizItem( type: "" )
-    private var _audio: String = ""
+    public var type: String = ""
+    public var src: String = ""
+    public var title: String = ""
+    public var transition: String = ""
+    public var embed: Bool = false
+    public var notes: String = ""
+    public var widget: Array<Segment> = []
+    public var frames: Array<String> = []
+    public var quiz: QuizItem = QuizItem( type: "" )
+    public var audio: String = ""
+    public var num: Int = 0
     
     public init() {}
-    
-    public var type: String {
-        
-        get {
-            
-            return self._type
-            
-        }
-        
-        set {
-            
-            self._type = newValue
-            
-        }
-        
-    }
-    
-    public var src: String {
-        
-        get {
-            
-            return self._src
-            
-        }
-        
-        set {
-            
-            self._src = newValue
-            
-        }
-        
-    }
-    
-    public var title: String {
-        
-        get {
-            
-            return self._title
-            
-        }
-        
-        set {
-            
-            self._title = newValue
-            
-        }
-        
-    }
-    
-    public var transition: String {
-        
-        get {
-            
-            return self._transition
-            
-        }
-        
-        set {
-            
-            self._transition = newValue
-            
-        }
-        
-    }
-    
-    public var embed: Bool {
-        
-        get {
-            
-            return self._embed
-            
-        }
-        
-        set {
-            
-            self._embed = newValue
-            
-        }
-        
-    }
-    
-    public var notes: String {
-        
-        get {
-            
-            return self._notes
-            
-        }
-        
-        set {
-            
-            self._notes = newValue
-            
-        }
-        
-    }
-    
-    public var widget: Array<Segment> {
-        
-        get {
-            
-            return self._widget
-            
-        }
-        
-    }
-    
-    public var frames: Array<String> {
-        
-        get {
-            
-            return self._frames
-            
-        }
-        
-    }
-    
-    public var quiz: QuizItem {
-        
-        get {
-            
-            return self._quiz
-            
-        }
-        
-        set {
-            
-            self._quiz = newValue
-            
-        }
-        
-    }
-    
-    public var audio: String {
-        
-        get {
-            
-            return self._audio
-            
-        }
-        
-        set {
-            
-            self._audio = newValue
-            
-        }
-        
-    }
     
     /**
      Add a segment to the segments array of a page instance.
@@ -433,7 +294,7 @@ public class Page {
      */
     public func addSegment( segment: Segment ) {
         
-        self._widget.append( segment )
+        self.widget.append( segment )
         
     }
     
@@ -444,7 +305,7 @@ public class Page {
      */
     public func addFrame( frame: String ) {
         
-        self._frames.append( frame )
+        self.frames.append( frame )
         
     }
     
@@ -464,106 +325,16 @@ public struct Segment {
 
 public class QuizItem {
     
-    private var _question: [String: String] = [:]
-    private var _type: String = ""
-    private var _feedback: Feedback = Feedback()
-    private var _choices: Array<[String: String]> = []
-    private var _random: Bool = false
-    private var _answer: String = ""
-    
-    public var question: [String: String] {
-        
-        get {
-            
-            return self._question
-            
-        }
-        
-        set {
-            
-            self._question = newValue
-            
-        }
-        
-    }
-    
-    public var type: String {
-        
-        get {
-            
-            return self._type
-            
-        }
-        
-    }
-    
-    public var feedback: Feedback {
-        
-        get {
-            
-            return self._feedback;
-            
-        }
-        
-        set {
-            
-            self._feedback = newValue
-            
-        }
-        
-    }
-    
-    public var choices: Array<[String: String]> {
-        
-        get {
-            
-            return self._choices
-            
-        }
-        
-        set {
-            
-            self._choices = newValue
-            
-        }
-        
-    }
-    
-    public var random: Bool {
-        
-        get {
-            
-            return self._random
-            
-        }
-        
-        set {
-            
-            self._random = newValue
-            
-        }
-        
-    }
-    
-    public var answer: String {
-        
-        get {
-            
-            return self._answer
-            
-        }
-        
-        set {
-            
-            self._answer = newValue
-            
-        }
-        
-    }
+    public var question: [String: String] = [:]
+    public var type: String = ""
+    public var feedback: Feedback = Feedback()
+    public var choices: Array<[String: String]> = []
+    public var random: Bool = false
+    public var answer: String = ""
     
     public init( type: String ) {
         
-        self._type = type
+        self.type = type
         
     }
     
