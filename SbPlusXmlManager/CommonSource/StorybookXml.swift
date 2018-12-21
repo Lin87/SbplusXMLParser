@@ -261,12 +261,18 @@ public struct Setup {
 }
 
 /// A section element in a Storybook Plus XML
-public struct Section {
+public class Section {
     
     public var title: String = ""
     public var pages: Array<Page>?
     
     public init() {}
+    
+    public func addPage() {
+        
+        pages?.append(Page())
+        
+    }
     
 }
 
