@@ -377,7 +377,7 @@ public class Page {
     public var quiz: QuizItem = QuizItem( type: "" )
     public var audio: String = ""
     public var num: Int = 0
-    var index: PageIndex = PageIndex()
+    public var index: PageIndex = PageIndex()
     
     /**
      Add a segment to the segments array of a page instance.
@@ -403,10 +403,12 @@ public class Page {
     
 }
 
-struct PageIndex {
+public struct PageIndex {
     
     public var section: Int = 0
     public var item: Int = 0
+    
+    public init() {}
     
 }
 
