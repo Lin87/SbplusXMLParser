@@ -207,20 +207,24 @@ public class StorybookXml {
         
         for section in self.sections {
             
-            let page: Page = Page()
+            let sectionAlias: Page = Page()
             
-            page.type = "section"
-            page.title = section.title
+            sectionAlias.type = "section"
+            sectionAlias.title = ""
             
             sectionCount += 1
-            page.num = sectionCount
+            sectionAlias.num = sectionCount
             
-            pages.append(page)
+            pages.append(sectionAlias)
             
-            for innerPage in section.pages! {
-                pageCount += 1
-                innerPage.num = pageCount
-                pages.append(innerPage)
+            if let innerPages = section.pages {
+                
+                for innerPage in innerPages {
+                    pageCount += 1
+                    innerPage.num = pageCount
+                    pages.append(innerPage)
+                }
+                
             }
             
         }
