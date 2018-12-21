@@ -110,57 +110,61 @@ public class StorybookXml {
             count += 1
             sectionString += "<section title=\"\(section.title)\">"
             
-            /// loop through pages within a section
-            for page in section.pages! {
+            if let innerPages = section.pages {
                 
-                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
-                
-                /// loop through segments within a page
-                if ( page.widget.count > 0 ) {
+                /// loop through pages within a section
+                for page in innerPages {
                     
-                    sectionString += "<widget>"
+                    sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
                     
-                    for segment in page.widget {
+                    /// loop through segments within a page
+                    if ( page.widget.count > 0 ) {
                         
-                        sectionString += "<segment name=\"\(segment.name)\"><![CDATA[\(segment.content)]]></segment>"
+                        sectionString += "<widget>"
                         
-                    }
-                    
-                    sectionString += "</widget>"
-                    
-                }
-                
-                /// loop through frames within a page
-                
-                if ( page.frames.count > 0 ) {
-                    
-                    for frame in page.frames {
+                        for segment in page.widget {
+                            
+                            sectionString += "<segment name=\"\(segment.name)\"><![CDATA[\(segment.content)]]></segment>"
+                            
+                        }
                         
-                        sectionString += "<frame start=\"\(frame)\" />"
+                        sectionString += "</widget>"
                         
                     }
                     
+                    /// loop through frames within a page
+                    
+                    if ( page.frames.count > 0 ) {
+                        
+                        for frame in page.frames {
+                            
+                            sectionString += "<frame start=\"\(frame)\" />"
+                            
+                        }
+                        
+                    }
+                    
+                    // get quiz item if quiz type
+                    if ( page.type == "quiz" ) {
+                        
+                        sectionString += page.quiz.generateXML()
+                        
+                    } else {
+                        
+                        sectionString += "<note>\(page.notes)</note>"
+                        
+                    }
+                    
+                    // get audio if it is html
+                    if( page.type == "html" && !page.audio.isEmpty ) {
+                        
+                        sectionString += "<audio src=\"\(page.audio)\" />"
+                        
+                    }
+                    
+                    sectionString += "</page>"
+                    
                 }
-                
-                // get quiz item if quiz type
-                if ( page.type == "quiz" ) {
-                    
-                    sectionString += page.quiz.generateXML()
-                    
-                } else {
-                    
-                    sectionString += "<note>\(page.notes)</note>"
-                    
-                }
-                
-                // get audio if it is html
-                if( page.type == "html" && !page.audio.isEmpty ) {
-                    
-                    sectionString += "<audio src=\"\(page.audio)\" />"
-                    
-                }
-                
-                sectionString += "</page>"
                 
             }
             
