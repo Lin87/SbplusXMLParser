@@ -110,61 +110,57 @@ public class StorybookXml {
             count += 1
             sectionString += "<section title=\"\(section.title)\">"
             
-            if let innerPages = section.pages {
+            /// loop through pages within a section
+            for page in section.pages {
                 
-                /// loop through pages within a section
-                for page in innerPages {
+                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
+                
+                /// loop through segments within a page
+                if ( page.widget.count > 0 ) {
                     
-                    sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
+                    sectionString += "<widget>"
                     
-                    /// loop through segments within a page
-                    if ( page.widget.count > 0 ) {
+                    for segment in page.widget {
                         
-                        sectionString += "<widget>"
-                        
-                        for segment in page.widget {
-                            
-                            sectionString += "<segment name=\"\(segment.name)\"><![CDATA[\(segment.content)]]></segment>"
-                            
-                        }
-                        
-                        sectionString += "</widget>"
+                        sectionString += "<segment name=\"\(segment.name)\"><![CDATA[\(segment.content)]]></segment>"
                         
                     }
                     
-                    /// loop through frames within a page
-                    
-                    if ( page.frames.count > 0 ) {
-                        
-                        for frame in page.frames {
-                            
-                            sectionString += "<frame start=\"\(frame)\" />"
-                            
-                        }
-                        
-                    }
-                    
-                    // get quiz item if quiz type
-                    if ( page.type == "quiz" ) {
-                        
-                        sectionString += page.quiz.generateXML()
-                        
-                    } else {
-                        
-                        sectionString += "<note>\(page.notes)</note>"
-                        
-                    }
-                    
-                    // get audio if it is html
-                    if( page.type == "html" && !page.audio.isEmpty ) {
-                        
-                        sectionString += "<audio src=\"\(page.audio)\" />"
-                        
-                    }
-                    
-                    sectionString += "</page>"
+                    sectionString += "</widget>"
                     
                 }
+                
+                /// loop through frames within a page
+                
+                if ( page.frames.count > 0 ) {
+                    
+                    for frame in page.frames {
+                        
+                        sectionString += "<frame start=\"\(frame)\" />"
+                        
+                    }
+                    
+                }
+                
+                // get quiz item if quiz type
+                if ( page.type == "quiz" ) {
+                    
+                    sectionString += page.quiz.generateXML()
+                    
+                } else {
+                    
+                    sectionString += "<note>\(page.notes)</note>"
+                    
+                }
+                
+                // get audio if it is html
+                if( page.type == "html" && !page.audio.isEmpty ) {
+                    
+                    sectionString += "<audio src=\"\(page.audio)\" />"
+                    
+                }
+                
+                sectionString += "</page>"
                 
             }
             
@@ -208,14 +204,10 @@ public class StorybookXml {
         
         if !sections.isEmpty && at > 0 {
             
-            if let pages = sections[at].pages {
-                
-                let previousSection = sections[sections.index(before: at)]
-                
-                for page in pages {
-                    previousSection.addPage(page: page)
-                }
-                
+            let previousSection = sections[sections.index(before: at)]
+            
+            for page in sections[at].pages {
+                previousSection.addPage(page: page)
             }
             
             self.sections.remove(at: at)
@@ -235,13 +227,9 @@ public class StorybookXml {
         
         if !sections.isEmpty {
             
-            if var pages = self.sections[at].pages {
+            if self.sections[at].pages.indices.contains(item) {
                 
-                if pages.indices.contains(item) {
-                    
-                    pages.remove(at: item)
-                    
-                }
+                self.sections[at].pages.remove(at: item)
                 
             }
             
@@ -263,11 +251,7 @@ public class StorybookXml {
             
             if sections.indices.contains(at) {
                 
-                if var pages = sections[at].pages {
-                    
-                    pages.append(page)
-                    
-                }
+               sections[at].pages.append(page)
                 
             }
             
@@ -283,6 +267,7 @@ public class StorybookXml {
     public func getSectionAsPages() -> Array<Page> {
         
         var pages: Array<Page> = [Page]()
+        var itemIndex: Int = 0
         var sectionCount: Int = 0
         var pageCount: Int = 0
         
@@ -297,20 +282,18 @@ public class StorybookXml {
             sectionCount += 1
             pages.append(sectionAlias)
             
-            if let innerPages = section.pages {
+            for innerPage in section.pages {
                 
-                var itemIndex: Int = 0
-                
-                for innerPage in innerPages {
-                    innerPage.num = pageCount
-                    innerPage.index.section = sectionAlias.num
-                    innerPage.index.item = itemIndex
-                    pageCount += 1
-                    itemIndex += 1
-                    pages.append(innerPage)
-                }
+                innerPage.num = pageCount
+                innerPage.index.section = sectionAlias.num
+                innerPage.index.item = itemIndex
+                pageCount += 1
+                itemIndex += 1
+                pages.append(innerPage)
                 
             }
+            
+            itemIndex = 0
             
         }
         
@@ -353,12 +336,12 @@ public struct Setup {
 public class Section {
     
     public var title: String = ""
-    public var pages: Array<Page>?
+    public var pages: Array<Page> = Array()
     
     public init() {}
     
     public func addPage(page: Page) {
-        pages?.append(page)
+        pages.append(page)
     }
     
 }
