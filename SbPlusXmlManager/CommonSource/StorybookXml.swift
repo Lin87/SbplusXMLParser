@@ -379,6 +379,8 @@ public class Page {
     public var num: Int = 0
     public var index: PageIndex = PageIndex()
     
+    public init() {}
+    
     /**
      Add a segment to the segments array of a page instance.
      
