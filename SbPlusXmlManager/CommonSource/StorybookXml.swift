@@ -192,9 +192,86 @@ public class StorybookXml {
      
      - Parameter section: The section struct to be added.
      */
-    public func addSection( section: Section ) {
+    public func addSection(section: Section) {
         
         self.sections.append( section )
+        
+    }
+    
+    /**
+     Delete a section from the sections array of the Storybook XML instance.
+     Any pages under the section will be moved to previous section
+     
+     - Parameter at: the page index to remove.
+     */
+    public func deleteSection(at: Int) {
+        
+        if !sections.isEmpty && at > 0 {
+            
+            if let pages = sections[at].pages {
+                
+                let previousSection = sections[sections.index(before: at)]
+                
+                for page in pages {
+                    previousSection.addPage(page: page)
+                }
+                
+            }
+            
+            self.sections.remove(at: at)
+            
+        }
+        
+    }
+    
+    /**
+     Delete a page from the sections array of the Storybook XML instance.
+     
+     - Parameters:
+     - item: the page index
+     - at: the section index
+     */
+    public func deletePage(item: Int, at: Int) {
+        
+        if !sections.isEmpty {
+            
+            if var pages = self.sections[at].pages {
+                
+                if pages.indices.contains(item) {
+                    
+                    pages.remove(at: item)
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    /**
+     A a section from the sections array of the Storybook XML instance.
+     Any pages under the section will be moved to previous section
+     
+     - Parameters:
+     - page: a page object to add
+     - at: the section index
+     */
+    public func addPage(page: Page, at: Int) {
+        
+        if !sections.isEmpty {
+            
+            if sections.indices.contains(at) {
+                
+                if var pages = sections[at].pages {
+                    
+                    pages.append(page)
+                    
+                }
+                
+            }
+            
+        }
         
     }
     
@@ -206,8 +283,8 @@ public class StorybookXml {
     public func getSectionAsPages() -> Array<Page> {
         
         var pages: Array<Page> = [Page]()
-        var sectionCount : Int = 0
-        var pageCount : Int = 0
+        var sectionCount: Int = 0
+        var pageCount: Int = 0
         
         for section in self.sections {
             
@@ -215,17 +292,21 @@ public class StorybookXml {
             
             sectionAlias.type = "section"
             sectionAlias.title = ""
-            
-            sectionCount += 1
             sectionAlias.num = sectionCount
             
+            sectionCount += 1
             pages.append(sectionAlias)
             
             if let innerPages = section.pages {
                 
+                var itemIndex: Int = 0
+                
                 for innerPage in innerPages {
-                    pageCount += 1
                     innerPage.num = pageCount
+                    innerPage.index.section = sectionAlias.num
+                    innerPage.index.item = itemIndex
+                    pageCount += 1
+                    itemIndex += 1
                     pages.append(innerPage)
                 }
                 
@@ -276,10 +357,8 @@ public class Section {
     
     public init() {}
     
-    public func addPage() {
-        
-        pages?.append(Page())
-        
+    public func addPage(page: Page) {
+        pages?.append(page)
     }
     
 }
@@ -298,8 +377,7 @@ public class Page {
     public var quiz: QuizItem = QuizItem( type: "" )
     public var audio: String = ""
     public var num: Int = 0
-    
-    public init() {}
+    var index: PageIndex = PageIndex()
     
     /**
      Add a segment to the segments array of a page instance.
@@ -322,6 +400,13 @@ public class Page {
         self.frames.append( frame )
         
     }
+    
+}
+
+struct PageIndex {
+    
+    public var section: Int = 0
+    public var item: Int = 0
     
 }
 
