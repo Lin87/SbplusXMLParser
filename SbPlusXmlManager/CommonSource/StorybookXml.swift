@@ -108,12 +108,12 @@ public class StorybookXml {
         for section in self.sections {
             
             count += 1
-            sectionString += "<section title=\"\(section.title)\">"
+            sectionString += "<section id=\"\(section.id)\" title=\"\(section.title)\">"
             
             /// loop through pages within a section
             for page in section.pages {
                 
-                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
+                sectionString += "<page id=\"\(page.id)\" type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
                 
                 /// loop through segments within a page
                 if ( page.widget.count > 0 ) {
@@ -267,7 +267,7 @@ public class StorybookXml {
     public func getSectionAsPages() -> Array<Page> {
         
         var pages: Array<Page> = [Page]()
-        var itemIndex: Int = 0
+        var pageIndex: Int = 0
         var sectionCount: Int = 0
         var pageCount: Int = 0
         
@@ -277,27 +277,66 @@ public class StorybookXml {
             
             sectionAlias.type = "section"
             sectionAlias.title = ""
-            sectionAlias.num = sectionCount
+            sectionAlias.number = sectionCount
+            
+            pages.append(sectionAlias)
             
             sectionCount += 1
-            pages.append(sectionAlias)
             
             for innerPage in section.pages {
                 
-                innerPage.num = pageCount
-                innerPage.index.section = sectionAlias.num
-                innerPage.index.item = itemIndex
+                let pageAlisa: Page = innerPage.copy() as! Page
+                
+                pageAlisa.number = pageCount
+                pageAlisa.index.section = sectionAlias.number
+                pageAlisa.index.item = pageIndex
+                
+                pages.append(pageAlisa)
+                
                 pageCount += 1
-                itemIndex += 1
-                pages.append(innerPage)
+                pageIndex += 1
                 
             }
             
-            itemIndex = 0
+            pageIndex = 0
             
         }
         
         return pages
+        
+    }
+    
+    /**
+     Return an array of pages to proper section and page objects
+     
+     - Parameter pages: an array of Page objects
+     - Returns: An array of sections with pages.
+     */
+    public func backToSectionsPages(pages: Array<Page>) -> Array<Section> {
+        
+        var sections: Array<Section> = [Section]()
+        
+        // first loop: create the sections first
+        for page in pages {
+            
+            if (page.type == "section") {
+                
+                let section: Section = Section()
+                section.id = page.id
+                section.title = page.title
+                
+                sections.append(section)
+                
+            } else {
+                
+                let page: Page = page.copy() as! Page
+                sections[page.index.section].addPage(page: page)
+                
+            }
+            
+        }
+        
+        return sections
         
     }
     
@@ -335,6 +374,9 @@ public struct Setup {
 /// A section element in a Storybook Plus XML
 public class Section {
     
+    static var idCount: Int = 0
+    
+    public var id: String = "sb-sctn-\(idCount += 1)"
     public var title: String = ""
     public var pages: Array<Page> = Array()
     
@@ -347,8 +389,11 @@ public class Section {
 }
 
 // a page element in a Storybook XML
-public class Page {
+public class Page: NSCopying {
     
+    static var idCount: Int = 0
+    
+    public var id: String = "sb-pg-\(idCount += 1)"
     public var type: String = ""
     public var src: String = ""
     public var title: String = ""
@@ -359,7 +404,7 @@ public class Page {
     public var frames: Array<String> = []
     public var quiz: QuizItem = QuizItem( type: "" )
     public var audio: String = ""
-    public var num: Int = 0
+    public var number: Int = 0
     public var index: PageIndex = PageIndex()
     
     public init() {}
@@ -386,8 +431,37 @@ public class Page {
         
     }
     
+    /**
+     Deep copying the object instead of by reference.
+     
+     - Parameter with: an optional NSZone object
+     - Returns: an Any object
+     */
+    public func copy(with zone: NSZone? = nil) -> Any {
+        
+        let copy = Page()
+        
+        copy.id = self.id
+        copy.type = self.type
+        copy.src  = self.src
+        copy.title  = self.title
+        copy.transition  = self.transition
+        copy.embed = self.embed
+        copy.notes  = self.notes
+        copy.widget  = self.widget
+        copy.frames  = self.frames
+        copy.quiz = self.quiz
+        copy.audio = self.audio
+        copy.number = self.number
+        copy.index = self.index
+        
+        return copy
+        
+    }
+    
 }
 
+// A page index of a page element of a Storybook Plus XML
 public struct PageIndex {
     
     public var section: Int = 0
