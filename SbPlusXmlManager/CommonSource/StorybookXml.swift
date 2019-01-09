@@ -377,7 +377,7 @@ public class Section {
     
     static var idCount: Int = 0
     
-    public var id: String = "sb-sctn-\(Section.idCount = idCount + 1)"
+    public var id: String = "sb-sctn-\(Section.idCount)"
     public var title: String = ""
     public var pages: Array<Page> = Array()
     
