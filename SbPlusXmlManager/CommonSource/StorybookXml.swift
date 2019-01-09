@@ -275,6 +275,7 @@ public class StorybookXml {
             
             let sectionAlias: Page = Page()
             
+            sectionAlias.id = section.id
             sectionAlias.type = "section"
             sectionAlias.title = section.title
             sectionAlias.number = sectionCount
@@ -285,13 +286,13 @@ public class StorybookXml {
             
             for innerPage in section.pages {
                 
-                let pageAlisa: Page = innerPage.copy() as! Page
+                let pageAlias: Page = innerPage.copy() as! Page
                 
-                pageAlisa.number = pageCount
-                pageAlisa.index.section = sectionAlias.number
-                pageAlisa.index.item = pageIndex
+                pageAlias.number = pageCount
+                pageAlias.index.section = sectionAlias.number
+                pageAlias.index.item = pageIndex
                 
-                pages.append(pageAlisa)
+                pages.append(pageAlias)
                 
                 pageCount += 1
                 pageIndex += 1
@@ -376,11 +377,13 @@ public class Section {
     
     static var idCount: Int = 0
     
-    public var id: String = "sb-sctn-\(idCount += 1)"
+    public var id: String = "sb-sctn-\(Section.idCount = idCount + 1)"
     public var title: String = ""
     public var pages: Array<Page> = Array()
     
-    public init() {}
+    public init() {
+        Section.idCount = Section.idCount + 1
+    }
     
     public func addPage(page: Page) {
         pages.append(page)
@@ -393,7 +396,7 @@ public class Page: NSCopying {
     
     static var idCount: Int = 0
     
-    public var id: String = "sb-pg-\(idCount += 1)"
+    public var id: String = "sb-pg-\(Page.idCount)"
     public var type: String = ""
     public var src: String = ""
     public var title: String = ""
@@ -407,7 +410,9 @@ public class Page: NSCopying {
     public var number: Int = 0
     public var index: PageIndex = PageIndex()
     
-    public init() {}
+    public init() {
+        Page.idCount = Page.idCount + 1
+    }
     
     /**
      Add a segment to the segments array of a page instance.
