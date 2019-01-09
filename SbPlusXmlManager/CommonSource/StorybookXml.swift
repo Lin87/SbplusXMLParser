@@ -276,7 +276,7 @@ public class StorybookXml {
             let sectionAlias: Page = Page()
             
             sectionAlias.type = "section"
-            sectionAlias.title = ""
+            sectionAlias.title = section.title
             sectionAlias.number = sectionCount
             
             pages.append(sectionAlias)
