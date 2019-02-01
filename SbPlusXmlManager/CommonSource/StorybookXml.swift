@@ -316,6 +316,7 @@ public class StorybookXml {
     public func backToSectionsPages(pages: Array<Page>) -> Array<Section> {
         
         var sections: Array<Section> = [Section]()
+        var sectionCount = -1
         
         // first loop: create the sections first
         for page in pages {
@@ -327,11 +328,12 @@ public class StorybookXml {
                 section.title = page.title
                 
                 sections.append(section)
+                sectionCount += 1
                 
             } else {
                 
                 let page: Page = page.copy() as! Page
-                sections[page.index.section].addPage(page: page)
+                sections[sectionCount].addPage(page: page)
                 
             }
             
