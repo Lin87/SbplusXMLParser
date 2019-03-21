@@ -131,15 +131,16 @@ public class StorybookXml {
                 }
                 
                 /// loop through frames within a page
-                
-                if ( page.frames.count > 0 ) {
-                    
-                    for frame in page.frames {
+                if ( page.type == "bundle" ) {
+                    if ( page.frames.count > 1 ) {
                         
-                        sectionString += "<frame start=\"\(frame)\" />"
+                        for frame in page.frames {
+                            
+                            sectionString += "<frame start=\"\(frame)\" />"
+                            
+                        }
                         
                     }
-                    
                 }
                 
                 // get quiz item if quiz type
