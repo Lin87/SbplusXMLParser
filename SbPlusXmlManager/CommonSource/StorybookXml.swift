@@ -406,7 +406,7 @@ public class Page: NSCopying {
     public var embed: Bool = false
     public var notes: String = ""
     public var widget: Array<Segment> = []
-    public var frames: Array<String> = []
+    public var frames: Array<String> = ["00:00"]
     public var quiz: QuizItem = QuizItem( type: "" )
     public var audio: String = ""
     public var number: Int = 0
