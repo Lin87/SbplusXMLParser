@@ -333,13 +333,13 @@ public class StorybookXml {
                 
                 let page: Page = page.copy() as! Page
                 
-//                if (page.type == "bundle" && page.frames.count >= 1) {
-//
-//                    if page.frames.first == "00:00" {
-//                        page.frames.remove(at: 0)
-//                    }
-//
-//                }
+                if (page.type == "bundle" && page.frames.count >= 1) {
+
+                    if page.frames.first == "00:00" {
+                        page.frames.remove(at: 0)
+                    }
+
+                }
                 
                 sections[sectionCount].addPage(page: page)
                 
