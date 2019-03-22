@@ -288,6 +288,10 @@ public class StorybookXml {
                 pageAlias.index.section = sectionAlias.number
                 pageAlias.index.item = pageIndex
                 
+                if (pageAlias.type == "bundle" && pageAlias.frames.count >= 1) {
+                    pageAlias.frames.insert("00:00", at: 0)
+                }
+                
                 pages.append(pageAlias)
                 
                 pageCount += 1
@@ -328,6 +332,11 @@ public class StorybookXml {
             } else {
                 
                 let page: Page = page.copy() as! Page
+                
+                if (page.type == "bundle" && page.frames.count >= 1) {
+                    page.frames = Array(page.frames.dropFirst())
+                }
+                
                 sections[sectionCount].addPage(page: page)
                 
             }
