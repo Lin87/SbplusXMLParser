@@ -288,9 +288,9 @@ public class StorybookXml {
                 pageAlias.index.section = sectionAlias.number
                 pageAlias.index.item = pageIndex
                 
-//                if (pageAlias.type == "bundle" && pageAlias.frames.count >= 1) {
-//                    pageAlias.frames.insert("00:00", at: 0)
-//                }
+                if (pageAlias.type == "bundle" && pageAlias.frames.count >= 1) {
+                    pageAlias.frames.insert("00:00", at: 0)
+                }
                 
                 pages.append(pageAlias)
                 
