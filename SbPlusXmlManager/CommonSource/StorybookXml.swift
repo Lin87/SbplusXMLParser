@@ -108,12 +108,12 @@ public class StorybookXml {
         for section in self.sections {
             
             count += 1
-            sectionString += "<section id=\"\(section.id)\" title=\"\(section.title)\">"
+            sectionString += "<section title=\"\(section.title)\">"
             
             /// loop through pages within a section
             for page in section.pages {
                 
-                sectionString += "<page id=\"\(page.id)\" type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
+                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src)\" title=\"\(page.title)\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
                 
                 /// loop through segments within a page
                 if ( page.widget.count > 0 ) {
@@ -133,12 +133,8 @@ public class StorybookXml {
                 /// loop through frames within a page
                 if ( page.type == "bundle" ) {
                     
-                    if ( page.frames.count > 1 ) {
-                        
-                        for frame in page.frames.dropFirst() {
-                            sectionString += "<frame start=\"\(frame)\" />"
-                        }
-                        
+                    for frame in page.frames.dropFirst() {
+                        sectionString += "<frame start=\"\(frame)\" />"
                     }
                     
                 }
@@ -276,7 +272,6 @@ public class StorybookXml {
             
             let sectionAlias: Page = Page()
             
-            sectionAlias.id = section.id
             sectionAlias.type = "section"
             sectionAlias.title = section.title
             sectionAlias.number = sectionCount
@@ -325,7 +320,6 @@ public class StorybookXml {
             if (page.type == "section") {
                 
                 let section: Section = Section()
-                section.id = page.id
                 section.title = page.title
                 
                 sections.append(section)
@@ -350,9 +344,7 @@ public class StorybookXml {
      - Returns: Number of sections.
      */
     public func getNumSections() -> Int {
-        
         return sections.count
-        
     }
     
 }
@@ -378,16 +370,16 @@ public struct Setup {
 /// A section element in a Storybook Plus XML
 public class Section {
     
-    static var idCount: Int = 0
-    
-    public var id: String = "sb-sctn-\(Section.idCount)"
     public var title: String = ""
     public var pages: Array<Page> = Array()
     
-    public init() {
-        Section.idCount = Section.idCount + 1
-    }
+    public init() {}
     
+    /**
+     Add a page element to the pages array of a section.
+     
+     - Parameter page: an instance of Page object to be added.
+     */
     public func addPage(page: Page) {
         pages.append(page)
     }
@@ -397,9 +389,6 @@ public class Section {
 // a page element in a Storybook XML
 public class Page: NSCopying {
     
-    static var idCount: Int = 0
-    
-    public var id: String = "sb-pg-\(Page.idCount)"
     public var type: String = ""
     public var src: String = ""
     public var title: String = ""
@@ -407,15 +396,13 @@ public class Page: NSCopying {
     public var embed: Bool = false
     public var notes: String = ""
     public var widget: Array<Segment> = []
-    public var frames: Array<String> = ["00:00"]
+    public var frames: Array<String> = []
     public var quiz: QuizItem = QuizItem( type: "" )
     public var audio: String = ""
     public var number: Int = 0
     public var index: PageIndex = PageIndex()
     
-    public init() {
-        Page.idCount = Page.idCount + 1
-    }
+    public init() {}
     
     /**
      Add a segment to the segments array of a page instance.
@@ -423,9 +410,7 @@ public class Page: NSCopying {
      - Parameter segment: the segment struct to be added.
      */
     public func addSegment( segment: Segment ) {
-        
-        self.widget.append( segment )
-        
+        widget.append( segment )
     }
     
     /**
@@ -434,9 +419,7 @@ public class Page: NSCopying {
      - Parameter frame: the frame timecode to be added.
      */
     public func addFrame( frame: String ) {
-        
-        self.frames.append( frame )
-        
+        frames.append( frame )
     }
     
     /**
@@ -449,7 +432,6 @@ public class Page: NSCopying {
         
         let copy = Page()
         
-        copy.id = self.id
         copy.type = self.type
         copy.src  = self.src
         copy.title  = self.title
@@ -501,9 +483,7 @@ public class QuizItem {
     public var answer: String = ""
     
     public init( type: String ) {
-        
         self.type = type
-        
     }
     
     public func generateXML() -> String {
@@ -515,9 +495,7 @@ public class QuizItem {
 public class ShortAnswer: QuizItem {
     
     public init() {
-        
         super.init(type: "shortAnswer")
-        
     }
     
     override public func generateXML() -> String {
@@ -531,9 +509,7 @@ public class ShortAnswer: QuizItem {
 public class FillInTheBlank: QuizItem {
     
     public init() {
-        
         super.init( type: "fillInTheBlank" )
-        
     }
     
     override public func generateXML() -> String {
@@ -547,9 +523,7 @@ public class FillInTheBlank: QuizItem {
 public class MultipleChoiceSingle: QuizItem {
     
     public init() {
-        
         super.init( type: "multipleChoiceSingle" )
-        
     }
     
     override public func generateXML() -> String {
@@ -573,9 +547,7 @@ public class MultipleChoiceSingle: QuizItem {
 public class MultipleChoiceMultiple: QuizItem {
     
     public init() {
-        
         super.init( type: "multipleChoiceMultiple" )
-        
     }
     
     override public func generateXML() -> String {
