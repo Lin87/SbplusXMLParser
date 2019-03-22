@@ -133,8 +133,16 @@ public class StorybookXml {
                 /// loop through frames within a page
                 if ( page.type == "bundle" ) {
                     
-                    for frame in page.frames.dropFirst() {
-                        sectionString += "<frame start=\"\(frame)\" />"
+                    if page.frames.count >= 1 {
+                        
+                        if page.frames.first == "00:00" {
+                            
+                            for frame in page.frames.dropFirst() {
+                                sectionString += "<frame start=\"\(frame)\" />"
+                            }
+                            
+                        }
+                        
                     }
                     
                 }
@@ -334,7 +342,11 @@ public class StorybookXml {
                 let page: Page = page.copy() as! Page
                 
                 if (page.type == "bundle" && page.frames.count >= 1) {
-                    page.frames = Array(page.frames.dropFirst())
+                    
+                    if page.frames.first == "00:00" {
+                        page.frames = Array(page.frames.dropFirst())
+                    }
+                    
                 }
                 
                 sections[sectionCount].addPage(page: page)
