@@ -133,16 +133,8 @@ public class StorybookXml {
                 /// loop through frames within a page
                 if ( page.type == "bundle" ) {
                     
-                    if page.frames.count >= 1 {
-                        
-                        if page.frames.first == "00:00" {
-                            
-                            for frame in page.frames.dropFirst() {
-                                sectionString += "<frame start=\"\(frame)\" />"
-                            }
-                            
-                        }
-                        
+                    for frame in page.frames {
+                        sectionString += "<frame start=\"\(frame)\" />"
                     }
                     
                 }
@@ -296,9 +288,9 @@ public class StorybookXml {
                 pageAlias.index.section = sectionAlias.number
                 pageAlias.index.item = pageIndex
                 
-                if (pageAlias.type == "bundle" && pageAlias.frames.count >= 1) {
-                    pageAlias.frames.insert("00:00", at: 0)
-                }
+//                if (pageAlias.type == "bundle" && pageAlias.frames.count >= 1) {
+//                    pageAlias.frames.insert("00:00", at: 0)
+//                }
                 
                 pages.append(pageAlias)
                 
@@ -341,13 +333,13 @@ public class StorybookXml {
                 
                 let page: Page = page.copy() as! Page
                 
-                if (page.type == "bundle" && page.frames.count >= 1) {
-                    
-                    if page.frames.first == "00:00" {
-                        page.frames = Array(page.frames.dropFirst())
-                    }
-                    
-                }
+//                if (page.type == "bundle" && page.frames.count >= 1) {
+//
+//                    if page.frames.first == "00:00" {
+//                        page.frames.remove(at: 0)
+//                    }
+//
+//                }
                 
                 sections[sectionCount].addPage(page: page)
                 
