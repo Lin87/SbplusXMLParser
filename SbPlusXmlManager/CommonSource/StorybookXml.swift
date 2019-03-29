@@ -513,7 +513,7 @@ public class ShortAnswer: QuizItem {
     
     override public func generateXML() -> String {
         
-        return "<shortAnswer><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><feedback><![CDATA[\(self.feedback.simple)]]></feedback></shortAnswer>"
+        return "<shortAnswer><question image=\"\(self.question["image"] ?? "")\" audio=\"\(self.question["audio"] ?? "")\"><![CDATA[\(self.question["text"] ?? "")]]></question><feedback><![CDATA[\(self.feedback.simple)]]></feedback></shortAnswer>"
         
     }
     
@@ -527,7 +527,7 @@ public class FillInTheBlank: QuizItem {
     
     override public func generateXML() -> String {
         
-        return "<fillInTheBlank><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><answer>\(self.answer)</answer><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><![CDATA[\(self.feedback.incorrect)]]><incorrectFeedback></incorrectFeedback></fillInTheBlank>"
+        return "<fillInTheBlank><question image=\"\(self.question["image"] ?? "")\" audio=\"\(self.question["audio"] ?? "")\"><![CDATA[\(self.question["text"] ?? "")]]></question><answer>\(self.answer)</answer><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><![CDATA[\(self.feedback.incorrect)]]><incorrectFeedback></incorrectFeedback></fillInTheBlank>"
         
     }
     
@@ -541,7 +541,7 @@ public class MultipleChoiceSingle: QuizItem {
     
     override public func generateXML() -> String {
         
-        var xml = "<multipleChoiceSingle><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><choices random=\"\(self.random)\">"
+        var xml = "<multipleChoiceSingle><question image=\"\(self.question["image"] ?? "")\" audio=\"\(self.question["audio"] ?? "")\"><![CDATA[\(self.question["text"] ?? "")]]></question><choices random=\"\(self.random)\">"
         
         for answer in self.choices {
             
@@ -565,7 +565,7 @@ public class MultipleChoiceMultiple: QuizItem {
     
     override public func generateXML() -> String {
         
-        var xml = "<multipleChoiceMultiple><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><choices random=\"\(self.random)\">"
+        var xml = "<multipleChoiceMultiple><question image=\"\(self.question["image"] ?? "")\" audio=\"\(self.question["audio"] ??  "")\"><![CDATA[\(self.question["text"] ?? "")]]></question><choices random=\"\(self.random)\">"
         
         for answer in self.choices {
             
