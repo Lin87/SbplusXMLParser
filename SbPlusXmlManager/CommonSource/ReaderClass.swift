@@ -351,19 +351,19 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
         }
         
-        if ( elementName == "shortAnswer" || elementName == "multipleChoiceSingle" || elementName == "multipleChoiceMultiple") {
+        if ( elementName == "shortAnswer" || elementName == "fillInTheBlank" || elementName == "multipleChoiceSingle" || elementName == "multipleChoiceMultiple") {
             
             self._tempPage.quiz = self._tempQuizItem
             self._tempQuizItem = QuizItem( type: "" )
             
         }
         
-        if ( elementName == "fillInTheBlank" ) {
-            
-            self._tempPage.quiz = self._tempQuizItem
-            self._tempQuizItem = QuizItem( type: "" )
-            
-        }
+//        if ( elementName == "fillInTheBlank" ) {
+//
+//            self._tempPage.quiz = self._tempQuizItem
+//            self._tempQuizItem = QuizItem( type: "" )
+//
+//        }
         
         if ( elementName == "question" ) {
             

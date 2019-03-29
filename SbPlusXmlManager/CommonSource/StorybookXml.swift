@@ -565,7 +565,7 @@ public class MultipleChoiceMultiple: QuizItem {
     
     override public func generateXML() -> String {
         
-        var xml = "<multipleChoiceSingle><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><choices random=\"\(self.random)\">"
+        var xml = "<multipleChoiceMultiple><question image=\"\(self.question["image"]!)\" audio=\"\(self.question["audio"]!)\"><![CDATA[\(self.question["text"]!)]]></question><choices random=\"\(self.random)\">"
         
         for answer in self.choices {
             
@@ -573,7 +573,7 @@ public class MultipleChoiceMultiple: QuizItem {
             
         }
         
-        xml += "</choices><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><incorrectFeedback><![CDATA[\(self.feedback.incorrect)]]>)</incorrectFeedback></multipleChoiceSingle>"
+        xml += "</choices><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><incorrectFeedback><![CDATA[\(self.feedback.incorrect)]]>)</incorrectFeedback></multipleChoiceMultiple>"
         
         return xml
         
