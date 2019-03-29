@@ -527,7 +527,7 @@ public class FillInTheBlank: QuizItem {
     
     override public func generateXML() -> String {
         
-        return "<fillInTheBlank><question image=\"\(self.question["image"] ?? "")\" audio=\"\(self.question["audio"] ?? "")\"><![CDATA[\(self.question["text"] ?? "")]]></question><answer>\(self.answer)</answer><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><![CDATA[\(self.feedback.incorrect)]]><incorrectFeedback></incorrectFeedback></fillInTheBlank>"
+        return "<fillInTheBlank><question image=\"\(self.question["image"] ?? "")\" audio=\"\(self.question["audio"] ?? "")\"><![CDATA[\(self.question["text"] ?? "")]]></question><answer>\(self.answer)</answer><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><incorrectFeedback><![CDATA[\(self.feedback.incorrect)]]></incorrectFeedback></fillInTheBlank>"
         
     }
     
@@ -573,7 +573,7 @@ public class MultipleChoiceMultiple: QuizItem {
             
         }
         
-        xml += "</choices><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><incorrectFeedback><![CDATA[\(self.feedback.incorrect)]]>)</incorrectFeedback></multipleChoiceMultiple>"
+        xml += "</choices><correctFeedback><![CDATA[\(self.feedback.correct)]]></correctFeedback><incorrectFeedback><![CDATA[\(self.feedback.incorrect)]]></incorrectFeedback></multipleChoiceMultiple>"
         
         return xml
         
