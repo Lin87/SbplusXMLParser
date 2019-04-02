@@ -240,7 +240,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             let random: String? = attributeDict["random"]
             
-            if ( random != nil && random! == "yes" ) {
+            if ( random != nil && (random! == "yes" || random! == "true" ) ) {
                 
                 self._tempQuizItem.random = true
                 
