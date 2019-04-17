@@ -146,7 +146,7 @@ public class StorybookXml {
                     
                 } else {
                     
-                    sectionString += "<note>\(page.notes)</note>"
+                    sectionString += "<note><![CDATA[\(page.notes)]]></note>"
                     
                 }
                 
