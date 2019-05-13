@@ -57,17 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B0A546C228A0C2000450D3E /* HTMLEntities */ = {
-			isa = PBXGroup;
-			children = (
-				1B0A546E228A0C5500450D3E /* Constants.swift */,
-				1B0A546D228A0C5500450D3E /* ParseError.swift */,
-				1B0A5470228A0C5500450D3E /* String+HTMLEntities.swift */,
-				1B0A546F228A0C5500450D3E /* Utilities.swift */,
-			);
-			path = HTMLEntities;
-			sourceTree = "<group>";
-		};
 		1B1E9FF220EE7E970048D3D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +85,14 @@
 		1BA58A2120EE6F83004D631F /* CommonSource */ = {
 			isa = PBXGroup;
 			children = (
-				1B0A546C228A0C2000450D3E /* HTMLEntities */,
 				1B677E0320EE749600CE97E8 /* ReaderClass.swift */,
 				1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */,
 				1B677E0920EE749600CE97E8 /* StorybookXml.swift */,
 				1BA58A2220EE6F83004D631F /* SbXmlParser.h */,
+				1B0A546E228A0C5500450D3E /* Constants.swift */,
+				1B0A546D228A0C5500450D3E /* ParseError.swift */,
+				1B0A5470228A0C5500450D3E /* String+HTMLEntities.swift */,
+				1B0A546F228A0C5500450D3E /* Utilities.swift */,
 				1BA58A2320EE6F83004D631F /* Info.plist */,
 			);
 			path = CommonSource;
