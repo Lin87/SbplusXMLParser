@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source_files = 'SbPlusXmlManager/CommonSource'
   s.swift_version = '5'
 
-  s.dependency "HTMLEntities"
+  s.dependency "HTMLEntities", "https://github.com/IBM-Swift/swift-html-entities.git"
 
 end
