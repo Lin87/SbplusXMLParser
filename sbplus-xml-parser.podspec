@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "sbplus-xml-parser"
-  s.version          = "1.0.49"
+  s.version          = "1.0.50"
   s.summary          = "The open source Storybook+ XML parser."
   s.homepage         = "https://github.com/oel-mediateam/sbplus-xml-parser"
   s.license          = 'GNU General Public License v3.0'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :osx, '10.12'
   s.requires_arc = true
 
-  s.source_files = 'SbPlusXmlManager/'
+  s.source_files = 'SbPlusXmlManager/CommonSource'
   s.swift_version = '5'
 
   s.dependency "HTMLEntities"
