@@ -1,0 +1,21 @@
+PODS:
+  - HTMLEntities (3.0.13)
+
+DEPENDENCIES:
+  - HTMLEntities (from `https://github.com/IBM-Swift/swift-html-entities.git`)
+
+EXTERNAL SOURCES:
+  HTMLEntities:
+    :git: https://github.com/IBM-Swift/swift-html-entities.git
+
+CHECKOUT OPTIONS:
+  HTMLEntities:
+    :commit: eef4eeb38feff7253e1a9553b53fe87bb17d301e
+    :git: https://github.com/IBM-Swift/swift-html-entities.git
+
+SPEC CHECKSUMS:
+  HTMLEntities: 83738511518b3f29cf9644d0877505b8d3d1a849
+
+PODFILE CHECKSUM: e84edc6cd50c6ac31bf2003bd6737d8b9b8e2c28
+
+COCOAPODS: 1.6.1

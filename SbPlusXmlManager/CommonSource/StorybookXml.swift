@@ -9,6 +9,7 @@
 */
 
 import Foundation
+import HTMLEntities
 
 /// A Storybook Plus XML
 public class StorybookXml {

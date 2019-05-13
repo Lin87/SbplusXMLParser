@@ -15,9 +15,13 @@
 		1B677E1E20EE749600CE97E8 /* StorybookXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXml.swift */; };
 		1B677E2320EE749600CE97E8 /* SbXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */; };
 		1B677E2420EE749600CE97E8 /* SbXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */; };
+		986BC81C0CABDED01342C3B1 /* Pods_SbXmlParser_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6393F109BC2A122E660BFE /* Pods_SbXmlParser_macOS.framework */; };
+		B7F1C200F41197C312DA4CFE /* Pods_SbXmlParser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD3C3E5DF92367E89AAAEA9 /* Pods_SbXmlParser_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0524030A0856D99EA9B187A9 /* Pods-SbXmlParser_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_iOS/Pods-SbXmlParser_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0F38DD70307F6D81BF9EF60E /* Pods-SbXmlParser_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_macOS.release.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_macOS/Pods-SbXmlParser_macOS.release.xcconfig"; sourceTree = "<group>"; };
 		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
 		1B677E0920EE749600CE97E8 /* StorybookXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookXml.swift; sourceTree = "<group>"; };
 		1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlParser.swift; sourceTree = "<group>"; };
@@ -25,6 +29,10 @@
 		1BA58A0A20EE6EB8004D631F /* SbXmlParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbXmlParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA58A2220EE6F83004D631F /* SbXmlParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbXmlParser.h; sourceTree = "<group>"; };
 		1BA58A2320EE6F83004D631F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6393F109BC2A122E660BFE /* Pods_SbXmlParser_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SbXmlParser_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD3C3E5DF92367E89AAAEA9 /* Pods_SbXmlParser_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SbXmlParser_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF4E2BB761651FEA2DA72D9 /* Pods-SbXmlParser_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_iOS.release.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_iOS/Pods-SbXmlParser_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9E49F7D32716474183D334A6 /* Pods-SbXmlParser_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_macOS.debug.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_macOS/Pods-SbXmlParser_macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F1C200F41197C312DA4CFE /* Pods_SbXmlParser_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986BC81C0CABDED01342C3B1 /* Pods_SbXmlParser_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +58,8 @@
 		1B1E9FF220EE7E970048D3D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AD3C3E5DF92367E89AAAEA9 /* Pods_SbXmlParser_iOS.framework */,
+				4D6393F109BC2A122E660BFE /* Pods_SbXmlParser_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -58,6 +70,7 @@
 				1BA58A2120EE6F83004D631F /* CommonSource */,
 				1BA589EC20EE6E3F004D631F /* Products */,
 				1B1E9FF220EE7E970048D3D4 /* Frameworks */,
+				1C4F86471E9D1AE32CB4B48E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +93,17 @@
 				1BA58A2320EE6F83004D631F /* Info.plist */,
 			);
 			path = CommonSource;
+			sourceTree = "<group>";
+		};
+		1C4F86471E9D1AE32CB4B48E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0524030A0856D99EA9B187A9 /* Pods-SbXmlParser_iOS.debug.xcconfig */,
+				5DF4E2BB761651FEA2DA72D9 /* Pods-SbXmlParser_iOS.release.xcconfig */,
+				9E49F7D32716474183D334A6 /* Pods-SbXmlParser_macOS.debug.xcconfig */,
+				0F38DD70307F6D81BF9EF60E /* Pods-SbXmlParser_macOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +132,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA589FF20EE6E3F004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_iOS" */;
 			buildPhases = (
+				9A15021841FBB5118EAF3EBE /* [CP] Check Pods Manifest.lock */,
 				1BA589E620EE6E3F004D631F /* Sources */,
 				1BA589E720EE6E3F004D631F /* Frameworks */,
 				1BA589E820EE6E3F004D631F /* Headers */,
@@ -126,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA58A1B20EE6EB9004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_macOS" */;
 			buildPhases = (
+				26DD7C0056EAFBF3B7098B2B /* [CP] Check Pods Manifest.lock */,
 				1BA58A0520EE6EB8004D631F /* Sources */,
 				1BA58A0620EE6EB8004D631F /* Frameworks */,
 				1BA58A0720EE6EB8004D631F /* Headers */,
@@ -152,7 +178,7 @@
 				TargetAttributes = {
 					1BA589EA20EE6E3F004D631F = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					1BA58A0920EE6EB8004D631F = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -195,6 +221,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26DD7C0056EAFBF3B7098B2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SbXmlParser_macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A15021841FBB5118EAF3EBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SbXmlParser_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BA589E620EE6E3F004D631F /* Sources */ = {
@@ -344,6 +417,7 @@
 		};
 		1BA58A0020EE6E3F004D631F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0524030A0856D99EA9B187A9 /* Pods-SbXmlParser_iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -365,13 +439,14 @@
 				PRODUCT_NAME = SbXmlParser;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1BA58A0120EE6E3F004D631F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF4E2BB761651FEA2DA72D9 /* Pods-SbXmlParser_iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -392,13 +467,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.media.uwex.SbXmlParser-iOS";
 				PRODUCT_NAME = SbXmlParser;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		1BA58A1C20EE6EB9004D631F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E49F7D32716474183D334A6 /* Pods-SbXmlParser_macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -429,6 +505,7 @@
 		};
 		1BA58A1D20EE6EB9004D631F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F38DD70307F6D81BF9EF60E /* Pods-SbXmlParser_macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

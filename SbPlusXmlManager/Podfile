@@ -1,0 +1,16 @@
+use_frameworks!
+
+def common_pods
+  # Encode HTML characters
+  pod 'HTMLEntities', :git => 'https://github.com/IBM-Swift/swift-html-entities.git'
+end
+
+target 'SbXmlParser_iOS' do
+  platform :ios, '9.0'
+  common_pods
+end
+
+target 'SbXmlParser_macOS' do
+  platform :osx, '10.13'
+  common_pods
+end
