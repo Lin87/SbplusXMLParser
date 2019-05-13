@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "sbplus-xml-parser"
-  s.version          = "1.0.45"
+  s.version          = "1.0.46"
   s.summary          = "The open source Storybook+ XML parser."
   s.homepage         = "https://github.com/oel-mediateam/sbplus-xml-parser"
   s.license          = 'GNU General Public License v3.0'
@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source_files = 'SbPlusXmlManager/CommonSource'
   s.swift_version = '5'
 
-  s.dependency "HTMLEntities", "https://github.com/IBM-Swift/swift-html-entities.git"
+  s.dependency "HTMLEntities", :git => 'https://github.com/IBM-Swift/swift-html-entities.git'
+
 
 end
