@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "sbplus-xml-parser"
-  s.version          = "1.0.43"
+  s.version          = "1.0.44"
   s.summary          = "The open source Storybook+ XML parser."
   s.homepage         = "https://github.com/oel-mediateam/sbplus-xml-parser"
   s.license          = 'GNU General Public License v3.0'

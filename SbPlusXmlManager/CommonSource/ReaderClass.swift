@@ -9,6 +9,7 @@
 // tutorial http://leaks.wanari.com/2016/08/24/xml-parsing-swift/
 
 import Foundation
+import HTMLEntities
 
 class SbXmlReader: NSObject, XMLParserDelegate {
     
@@ -112,8 +113,8 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             let program: String? = attributeDict["program"]
             let course: String? = attributeDict["course"]
             
-            self.sbXmlSetup.program = program!
-            self.sbXmlSetup.course = course!
+            self.sbXmlSetup.program = program!.htmlUnescape()
+            self.sbXmlSetup.course = course!.htmlUnescape()
             
         }
         
@@ -121,7 +122,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             let name: String? = attributeDict["name"]
             
-            self.sbXmlSetup.authorName = name!
+            self.sbXmlSetup.authorName = name!.htmlUnescape()
             
         }
         
@@ -144,7 +145,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 let transition: String? = attributeDict["transition"]
                 let embed: String? = attributeDict["embed"]
                 
-                self._tempPage.src = src!
+                self._tempPage.src = src!.htmlUnescape()
                 
                 if ( transition != nil ) {
                     
@@ -159,7 +160,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             }
             
             self._tempPage.type = type!
-            self._tempPage.title = title!
+            self._tempPage.title = title!.htmlUnescape()
             
         }
         
@@ -179,7 +180,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
             
             let name: String? = attributeDict["name"]
             
-            self._tempSegment.name = name!
+            self._tempSegment.name = name!.htmlUnescape()
             
         }
         
