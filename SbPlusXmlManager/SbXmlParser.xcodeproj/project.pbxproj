@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B0A54672289FFBB00450D3E /* HTMLEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A54662289FFBB00450D3E /* HTMLEntities.framework */; };
-		1B0A54692289FFCA00450D3E /* HTMLEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A54682289FFCA00450D3E /* HTMLEntities.framework */; };
+		1B0A5471228A0C5500450D3E /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A546D228A0C5500450D3E /* ParseError.swift */; };
+		1B0A5472228A0C5500450D3E /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A546D228A0C5500450D3E /* ParseError.swift */; };
+		1B0A5473228A0C5500450D3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A546E228A0C5500450D3E /* Constants.swift */; };
+		1B0A5474228A0C5500450D3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A546E228A0C5500450D3E /* Constants.swift */; };
+		1B0A5475228A0C5500450D3E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A546F228A0C5500450D3E /* Utilities.swift */; };
+		1B0A5476228A0C5500450D3E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A546F228A0C5500450D3E /* Utilities.swift */; };
+		1B0A5477228A0C5500450D3E /* String+HTMLEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5470228A0C5500450D3E /* String+HTMLEntities.swift */; };
+		1B0A5478228A0C5500450D3E /* String+HTMLEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5470228A0C5500450D3E /* String+HTMLEntities.swift */; };
 		1B677DFD20EE706400CE97E8 /* SbXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbXmlParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B677DFE20EE706700CE97E8 /* SbXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA58A2220EE6F83004D631F /* SbXmlParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0320EE749600CE97E8 /* ReaderClass.swift */; };
@@ -17,16 +23,13 @@
 		1B677E1E20EE749600CE97E8 /* StorybookXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0920EE749600CE97E8 /* StorybookXml.swift */; };
 		1B677E2320EE749600CE97E8 /* SbXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */; };
 		1B677E2420EE749600CE97E8 /* SbXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */; };
-		51E83D4AC2B9A70BF7B0D60E /* Pods_SbXmlParser_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F203059F9DF5D858C97A6 /* Pods_SbXmlParser_macOS.framework */; };
-		ECA33F43EC03AB2D87687286 /* Pods_SbXmlParser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1FA039AF0AE01CAA67B4C /* Pods_SbXmlParser_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01E1FA039AF0AE01CAA67B4C /* Pods_SbXmlParser_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SbXmlParser_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0524030A0856D99EA9B187A9 /* Pods-SbXmlParser_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_iOS/Pods-SbXmlParser_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0F38DD70307F6D81BF9EF60E /* Pods-SbXmlParser_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_macOS.release.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_macOS/Pods-SbXmlParser_macOS.release.xcconfig"; sourceTree = "<group>"; };
-		1B0A54662289FFBB00450D3E /* HTMLEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTMLEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B0A54682289FFCA00450D3E /* HTMLEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTMLEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B0A546D228A0C5500450D3E /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
+		1B0A546E228A0C5500450D3E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1B0A546F228A0C5500450D3E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1B0A5470228A0C5500450D3E /* String+HTMLEntities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLEntities.swift"; sourceTree = "<group>"; };
 		1B677E0320EE749600CE97E8 /* ReaderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderClass.swift; sourceTree = "<group>"; };
 		1B677E0920EE749600CE97E8 /* StorybookXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorybookXml.swift; sourceTree = "<group>"; };
 		1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbXmlParser.swift; sourceTree = "<group>"; };
@@ -34,9 +37,6 @@
 		1BA58A0A20EE6EB8004D631F /* SbXmlParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SbXmlParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA58A2220EE6F83004D631F /* SbXmlParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SbXmlParser.h; sourceTree = "<group>"; };
 		1BA58A2320EE6F83004D631F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		320F203059F9DF5D858C97A6 /* Pods_SbXmlParser_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SbXmlParser_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DF4E2BB761651FEA2DA72D9 /* Pods-SbXmlParser_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_iOS.release.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_iOS/Pods-SbXmlParser_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		9E49F7D32716474183D334A6 /* Pods-SbXmlParser_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SbXmlParser_macOS.debug.xcconfig"; path = "Target Support Files/Pods-SbXmlParser_macOS/Pods-SbXmlParser_macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0A54672289FFBB00450D3E /* HTMLEntities.framework in Frameworks */,
-				ECA33F43EC03AB2D87687286 /* Pods_SbXmlParser_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,21 +51,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0A54692289FFCA00450D3E /* HTMLEntities.framework in Frameworks */,
-				51E83D4AC2B9A70BF7B0D60E /* Pods_SbXmlParser_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0A546C228A0C2000450D3E /* HTMLEntities */ = {
+			isa = PBXGroup;
+			children = (
+				1B0A546E228A0C5500450D3E /* Constants.swift */,
+				1B0A546D228A0C5500450D3E /* ParseError.swift */,
+				1B0A5470228A0C5500450D3E /* String+HTMLEntities.swift */,
+				1B0A546F228A0C5500450D3E /* Utilities.swift */,
+			);
+			path = HTMLEntities;
+			sourceTree = "<group>";
+		};
 		1B1E9FF220EE7E970048D3D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B0A54682289FFCA00450D3E /* HTMLEntities.framework */,
-				1B0A54662289FFBB00450D3E /* HTMLEntities.framework */,
-				01E1FA039AF0AE01CAA67B4C /* Pods_SbXmlParser_iOS.framework */,
-				320F203059F9DF5D858C97A6 /* Pods_SbXmlParser_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,7 +81,6 @@
 				1BA58A2120EE6F83004D631F /* CommonSource */,
 				1BA589EC20EE6E3F004D631F /* Products */,
 				1B1E9FF220EE7E970048D3D4 /* Frameworks */,
-				1C4F86471E9D1AE32CB4B48E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +96,7 @@
 		1BA58A2120EE6F83004D631F /* CommonSource */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A546C228A0C2000450D3E /* HTMLEntities */,
 				1B677E0320EE749600CE97E8 /* ReaderClass.swift */,
 				1B677E0C20EE749600CE97E8 /* SbXmlParser.swift */,
 				1B677E0920EE749600CE97E8 /* StorybookXml.swift */,
@@ -101,17 +104,6 @@
 				1BA58A2320EE6F83004D631F /* Info.plist */,
 			);
 			path = CommonSource;
-			sourceTree = "<group>";
-		};
-		1C4F86471E9D1AE32CB4B48E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0524030A0856D99EA9B187A9 /* Pods-SbXmlParser_iOS.debug.xcconfig */,
-				5DF4E2BB761651FEA2DA72D9 /* Pods-SbXmlParser_iOS.release.xcconfig */,
-				9E49F7D32716474183D334A6 /* Pods-SbXmlParser_macOS.debug.xcconfig */,
-				0F38DD70307F6D81BF9EF60E /* Pods-SbXmlParser_macOS.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +132,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA589FF20EE6E3F004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_iOS" */;
 			buildPhases = (
-				9A15021841FBB5118EAF3EBE /* [CP] Check Pods Manifest.lock */,
 				1BA589E620EE6E3F004D631F /* Sources */,
 				1BA589E720EE6E3F004D631F /* Frameworks */,
 				1BA589E820EE6E3F004D631F /* Headers */,
@@ -159,7 +150,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA58A1B20EE6EB9004D631F /* Build configuration list for PBXNativeTarget "SbXmlParser_macOS" */;
 			buildPhases = (
-				26DD7C0056EAFBF3B7098B2B /* [CP] Check Pods Manifest.lock */,
 				1BA58A0520EE6EB8004D631F /* Sources */,
 				1BA58A0620EE6EB8004D631F /* Frameworks */,
 				1BA58A0720EE6EB8004D631F /* Headers */,
@@ -230,58 +220,15 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		26DD7C0056EAFBF3B7098B2B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SbXmlParser_macOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A15021841FBB5118EAF3EBE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SbXmlParser_iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1BA589E620EE6E3F004D631F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0A5475228A0C5500450D3E /* Utilities.swift in Sources */,
+				1B0A5473228A0C5500450D3E /* Constants.swift in Sources */,
+				1B0A5477228A0C5500450D3E /* String+HTMLEntities.swift in Sources */,
+				1B0A5471228A0C5500450D3E /* ParseError.swift in Sources */,
 				1B677E1D20EE749600CE97E8 /* StorybookXml.swift in Sources */,
 				1B677E2320EE749600CE97E8 /* SbXmlParser.swift in Sources */,
 				1B677E1120EE749600CE97E8 /* ReaderClass.swift in Sources */,
@@ -292,6 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0A5476228A0C5500450D3E /* Utilities.swift in Sources */,
+				1B0A5474228A0C5500450D3E /* Constants.swift in Sources */,
+				1B0A5478228A0C5500450D3E /* String+HTMLEntities.swift in Sources */,
+				1B0A5472228A0C5500450D3E /* ParseError.swift in Sources */,
 				1B677E1E20EE749600CE97E8 /* StorybookXml.swift in Sources */,
 				1B677E2420EE749600CE97E8 /* SbXmlParser.swift in Sources */,
 				1B677E1220EE749600CE97E8 /* ReaderClass.swift in Sources */,
@@ -425,7 +376,6 @@
 		};
 		1BA58A0020EE6E3F004D631F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0524030A0856D99EA9B187A9 /* Pods-SbXmlParser_iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -454,7 +404,6 @@
 		};
 		1BA58A0120EE6E3F004D631F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DF4E2BB761651FEA2DA72D9 /* Pods-SbXmlParser_iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -482,7 +431,6 @@
 		};
 		1BA58A1C20EE6EB9004D631F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E49F7D32716474183D334A6 /* Pods-SbXmlParser_macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -513,7 +461,6 @@
 		};
 		1BA58A1D20EE6EB9004D631F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F38DD70307F6D81BF9EF60E /* Pods-SbXmlParser_macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

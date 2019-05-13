@@ -9,7 +9,6 @@
 // tutorial http://leaks.wanari.com/2016/08/24/xml-parsing-swift/
 
 import Foundation
-import HTMLEntities
 
 class SbXmlReader: NSObject, XMLParserDelegate {
     
