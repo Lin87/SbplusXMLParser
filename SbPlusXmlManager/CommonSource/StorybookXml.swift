@@ -298,7 +298,7 @@ public class StorybookXml {
                 
                 if (pageAlias.type == "bundle") {
                     
-                    if pageAlias.frames.first == nil {
+                    if pageAlias.frames.first == nil || pageAlias.frames.first != "00:00" {
                         pageAlias.frames.insert("00:00", at: 0)
                     }
                     
