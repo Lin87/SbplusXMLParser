@@ -117,7 +117,7 @@ public class StorybookXml {
             /// loop through pages within a section
             for page in section.pages {
                 
-                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" embed=\"\(page.embed)\">"
+                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" embed=\"\(page.embed)\" preventAutoplay=\"\(page.preventAutoplay)\">"
                 
                 /// loop through segments within a page
                 if ( page.widget.count > 0 ) {
@@ -418,6 +418,7 @@ public class Page: NSCopying {
     public var src: String = ""
     public var title: String = ""
     public var transition: String = ""
+    public var preventAutoplay: String = ""
     public var embed: Bool = false
     public var notes: String = ""
     public var widget: Array<Segment> = []
@@ -458,13 +459,14 @@ public class Page: NSCopying {
         let copy = Page()
         
         copy.type = self.type
-        copy.src  = self.src
-        copy.title  = self.title
-        copy.transition  = self.transition
+        copy.src = self.src
+        copy.title = self.title
+        copy.transition = self.transition
+        copy.preventAutoplay = self.preventAutoplay
         copy.embed = self.embed
-        copy.notes  = self.notes
-        copy.widget  = self.widget
-        copy.frames  = self.frames
+        copy.notes = self.notes
+        copy.widget = self.widget
+        copy.frames = self.frames
         copy.quiz = self.quiz
         copy.audio = self.audio
         copy.number = self.number

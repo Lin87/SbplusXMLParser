@@ -143,13 +143,16 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 let src: String? = attributeDict["src"]
                 let transition: String? = attributeDict["transition"]
                 let embed: String? = attributeDict["embed"]
+                let preventAutoplay: String? = attributeDict["preventAutoplay"]
                 
                 self._tempPage.src = src!.htmlUnescape()
                 
                 if ( transition != nil ) {
-                    
                     self._tempPage.transition = transition!
-                    
+                }
+                
+                if ( preventAutoplay != nil ) {
+                    self._tempPage.preventAutoplay = preventAutoplay!
                 }
                 
                 if ( embed != nil && embed! == "yes" ) {
