@@ -119,6 +119,20 @@ public class StorybookXml {
                 
                 sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" embed=\"\(page.embed)\" preventAutoplay=\"\(page.preventAutoplay)\">"
                 
+                if page.type == "html" {
+                    
+                    sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" embed=\"\(page.embed)\" preventAutoplay=\"\(page.preventAutoplay)\">"
+                    
+                } else if page.type == "youtube" {
+                    
+                    sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" preventAutoplay=\"\(page.preventAutoplay)\" useDefaultPlayer=\"\(page.useDefaultPlayer)\">"
+                    
+                } else {
+                    
+                    sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" preventAutoplay=\"\(page.preventAutoplay)\">"
+                    
+                }
+                
                 /// loop through segments within a page
                 if ( page.widget.count > 0 ) {
                     
@@ -420,6 +434,7 @@ public class Page: NSCopying {
     public var transition: String = ""
     public var preventAutoplay: String = ""
     public var embed: Bool = false
+    public var useDefaultPlayer: String = ""
     public var notes: String = ""
     public var widget: Array<Segment> = []
     public var frames: Array<String> = []
@@ -464,6 +479,7 @@ public class Page: NSCopying {
         copy.transition = self.transition
         copy.preventAutoplay = self.preventAutoplay
         copy.embed = self.embed
+        copy.useDefaultPlayer = self.useDefaultPlayer
         copy.notes = self.notes
         copy.widget = self.widget
         copy.frames = self.frames

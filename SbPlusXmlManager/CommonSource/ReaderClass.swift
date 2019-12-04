@@ -144,6 +144,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 let transition: String? = attributeDict["transition"]
                 let embed: String? = attributeDict["embed"]
                 let preventAutoplay: String? = attributeDict["preventAutoplay"]
+                let useDefaultPlayer: String? = attributeDict["useDefaultPlayer"]
                 
                 self._tempPage.src = src!.htmlUnescape()
                 
@@ -153,6 +154,10 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 
                 if ( preventAutoplay != nil ) {
                     self._tempPage.preventAutoplay = preventAutoplay!
+                }
+                
+                if ( useDefaultPlayer != nil ) {
+                    self._tempPage.useDefaultPlayer = useDefaultPlayer!
                 }
                 
                 if ( embed != nil && embed! == "yes" ) {
