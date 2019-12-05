@@ -117,8 +117,6 @@ public class StorybookXml {
             /// loop through pages within a section
             for page in section.pages {
                 
-                sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" embed=\"\(page.embed)\" preventAutoplay=\"\(page.preventAutoplay)\">"
-                
                 if page.type == "html" {
                     
                     sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" embed=\"\(page.embed)\" preventAutoplay=\"\(page.preventAutoplay)\">"
@@ -126,6 +124,10 @@ public class StorybookXml {
                 } else if page.type == "youtube" {
                     
                     sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\" preventAutoplay=\"\(page.preventAutoplay)\" useDefaultPlayer=\"\(page.useDefaultPlayer)\">"
+                    
+                } else if page.type == "image" {
+                    
+                    sectionString += "<page type=\"\(page.type)\" src=\"\(page.src.htmlEscape())\" title=\"\(page.title.htmlEscape())\" transition=\"\(page.transition)\">"
                     
                 } else {
                     
