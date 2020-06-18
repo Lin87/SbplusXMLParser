@@ -161,7 +161,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                 }
                 
                 if ( embed != nil && (embed! == "yes" || embed! == "true") ) {
-                    self._tempPage.embed = true
+                    self._tempPage.embed = "true"
                 }
                 
             }
