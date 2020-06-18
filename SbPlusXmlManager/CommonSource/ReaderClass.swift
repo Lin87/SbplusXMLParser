@@ -160,7 +160,7 @@ class SbXmlReader: NSObject, XMLParserDelegate {
                     self._tempPage.useDefaultPlayer = useDefaultPlayer!
                 }
                 
-                if ( embed != nil && embed! == "yes" ) {
+                if ( embed != nil && (embed! == "yes" || embed! == "true") ) {
                     self._tempPage.embed = true
                 }
                 

@@ -435,7 +435,7 @@ public class Page: NSCopying {
     public var title: String = ""
     public var transition: String = ""
     public var preventAutoplay: String = ""
-    public var embed: Bool = false
+    public var embed: String = ""
     public var useDefaultPlayer: String = ""
     public var notes: String = ""
     public var widget: Array<Segment> = []
